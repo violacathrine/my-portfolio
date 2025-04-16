@@ -10,12 +10,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   text-align: center;
   font-family: var(--font-family);
   background-color: var(--background-color);
   color: var(--text-color);
-  padding-bottom: 0;
+  padding-top: 2.5rem;
 }
 
 .heading {
