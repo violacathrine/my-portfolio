@@ -1,0 +1,147 @@
+:root {
+  --primary-color: #000000;
+  --background-color: rgb(255, 185, 227);
+  --text-color: #000000;
+  --font-family: arial, sans-serif;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding-bottom: 0;
+}
+
+.heading {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-top: 1rem;
+}
+
+.line {
+  display: block;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.line.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.line-wrapper {
+  display: inline;
+  font-size: 0;
+}
+
+.line-2,
+.line-3 {
+  display: inline-block;
+  font-size: 2.5rem;
+}
+
+.line-3.visible {
+  opacity: 1;
+  animation: bounceIn 0.6s ease;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.introduction img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 1rem 0;
+  object-fit: cover;
+}
+
+.introduction h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* Button styles */
+button {
+  color: var(--primary-color);
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--primary-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+button p::before {
+  position: absolute;
+  width: 0%;
+  inset: 0;
+  color: var(--primary-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+button:hover::after {
+  width: 100%;
+}
+
+button:hover p::before {
+  width: 100%;
+}
+
+button:hover svg {
+  transform: translateX(4px);
+  color: var(--primary-color);
+}
+
+button svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
