@@ -52,7 +52,11 @@ export const Intro = ({ onEnter }) => {
 
       <h2>I'm an open-minded and curious developer.</h2>
 
-      <button onClick={onEnter} aria-label="Enter the main portfolio content">
+      <button
+        className="intro-btn"
+        onClick={onEnter}
+        aria-label="Enter the main portfolio content"
+      >
         <p>Enter my world</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"

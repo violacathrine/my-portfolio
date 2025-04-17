@@ -3,9 +3,9 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  padding: 0rem;
-  background-color: #ffecea;
+  padding: 2rem;
   font-family: "hind";
+  background-color: rgb(255, 185, 227);
 }
 
 /* Desktop layout */
