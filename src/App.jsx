@@ -1,7 +1,8 @@
 // src/App.jsx
 import { useState } from "react";
+import content from "./data/content.json";
 import { Intro } from "./components/Intro";
-// import { Header } from './components/Header';  // vi lägger till senare
+import { HeaderSection } from "./components/HeaderSection";
 
 export const App = () => {
   const [showMainContent, setShowMainContent] = useState(false);
@@ -16,9 +17,13 @@ export const App = () => {
         <Intro onEnter={handleEnterClick} />
       ) : (
         <>
-          {/* Här börjar resten av sidan, som visas efter intro */}
-          <h2>Main content goes here ✨</h2>
-          {/* <Header /> osv... */}
+<HeaderSection
+  heading={content.headerSection.heading}
+  text={content.headerSection.text}
+  email={content.headerSection.email}
+  mailtoText={content.headerSection.mailtoText}
+  nav={content.headerSection.nav}
+/>
         </>
       )}
     </>

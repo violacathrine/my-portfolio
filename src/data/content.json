@@ -4,9 +4,18 @@
     "subheading": "An open-minded and curious developer"
   },
 
-  "header": {
+  "headerSection": {
     "heading": "The Crash Course about me",
-    "text": "I am a curious and openminded developer with a background in sales and customer service. I enjoy creativity and really love to think outside the block. Throw in a splash of color, cool animations, a touch of playfulness and a pinch of humor and thats what you’ll get from me in a future colloboration. Interested? Email me! 💌"
+    "text": "I am a curious and openminded developer with a background in sales and customer service. I enjoy creativity and really love to think outside the block. Throw in a splash of color, cool animations, a touch of playfulness and a pinch of humor and thats what you’ll get from me in a future colloboration.",
+    "email": "cathrineohlsson@live.se",
+    "mailtoText": "Email me!",
+    "nav": [
+      { "label": "Tech", "href": "#tech", "page": 1 },
+      { "label": "Projects", "href": "#projects", "page": 2 },
+      { "label": "My journey", "href": "#my-journey", "page": 3 },
+      { "label": "Skills", "href": "#skills", "page": 4 },
+      { "label": "Contact", "href": "#contact", "page": 5 }
+    ]
   },
 
   "tech": {
