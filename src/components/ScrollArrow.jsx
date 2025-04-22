@@ -25,7 +25,7 @@ export const ScrollArrow = ({ targetId }) => {
           d="M24 23.5L14.5 33M14.5 33L5 23.5M14.5 33L14.5 3"
           stroke="#FF4575"
           strokeWidth="6"
-          strokeLinecap="square"
+          strokeLinecap="round"
           strokeLinejoin="round"
         />
       </svg>
