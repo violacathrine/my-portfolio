@@ -2,7 +2,6 @@
 import content from "./data/content.json";
 import { Intro } from "./components/Intro";
 import { HeaderSection } from "./components/HeaderSection";
-import { ScrollArrow } from "./components/ScrollArrow";
 import { Tech } from "./components/Tech";
 import { Projects } from "./components/Projects";
 import { MyJourney } from "./components/MyJourney";
@@ -41,10 +40,7 @@ export const App = () => {
       />
 
       {/* SKILLS */}
-      <Skills
-        heading={content.skills.heading}
-        groups={content.skills.groups}
-      />
+      <Skills heading={content.skills.heading} groups={content.skills.groups} />
 
       {/* CONTACT */}
       <Contact

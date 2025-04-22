@@ -5,9 +5,8 @@ import { ScrollArrow } from "./ScrollArrow";
 // Layout
 const HeaderWrapper = styled.header`
   display: flex;
-  flex-direction: column; // ✅ staplar alla element vertikalt
+  flex-direction: column;
   gap: 2rem;
-  font-family: "Hind", sans-serif;
   padding: 1rem;
   background-color: white;
 

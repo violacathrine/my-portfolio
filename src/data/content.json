@@ -42,8 +42,8 @@
     "heading": "Projects",
     "projects": [
       {
-        "name": "Business site",
-        "image": "https://images.unsplash.com/photo-1557008075-7f2c5efa4cfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2497&q=80",
+        "name": "Morbid Gene Official",
+        "image": "/mockup-morbidgene.png",
         "text": "This website is built with HTML5, CSS3 and JavaScript and was one of my very first projects i built in this bootcamp.  It’s an official site for the band and i’m still working on it. My plan for the project is to expand the subpages and update it with more photos from their gigs.",
         "tags": ["HTML5", "CSS3", "JavaScript"],
         "netlify": "link",
