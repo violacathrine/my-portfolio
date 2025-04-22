@@ -25,11 +25,6 @@ export const App = () => {
         nav={content.headerSection.nav}
       />
 
-      {/* BOUNCING ARROW */}
-      <div className="scroll-arrow-wrapper">
-        <ScrollArrow targetId="tech-anchor" />
-      </div>
-
       {/* TECH */}
       <Tech heading={content.tech.heading} items={content.tech.items} />
 

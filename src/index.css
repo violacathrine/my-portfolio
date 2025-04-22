@@ -4,30 +4,3 @@ body {
   padding: 0;
   margin: 0;
 }
-
-.scroll-arrow-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 4rem; /* = 64px */
-}
-
-.scroll-arrow {
-  display: flex;
-  justify-content: center;
-  animation: bounce 2s infinite;
-  cursor: pointer;
-  background: none;
-  border: none;
-  align-items: center;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(8px);
-  }
-}

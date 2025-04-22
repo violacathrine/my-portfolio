@@ -28,10 +28,10 @@ const Section = styled.section`
   font-family: Arial, sans-serif;
   background-color: rgb(255, 185, 227);
   color: #000;
-  padding-top: 2.5rem;
+  padding: 2.6rem;
 
   @media (min-width: 768px) {
-    padding-top: 9rem;
+    padding: 12rem;
   }
 `;
 

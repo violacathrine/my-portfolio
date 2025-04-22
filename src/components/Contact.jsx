@@ -1,10 +1,10 @@
 import React from "react";
 
-export const Contact = ({ heading, name, email, image, socials }) => {
+export const Contact = ({ heading, name, email, socials }) => {
   return (
     <section id="contact" className="contact-section">
       <h2>{heading}</h2>
-      <img src={image} alt={`Portrait of ${name}`} />
+      {/*<img src={image} alt={`Portrait of ${name}`} />*/}
       <p>{name}</p>
       <p>
         <a href={`mailto:${email}`}>{email}</a>
