@@ -18,8 +18,9 @@ const bounceIn = keyframes`
   }
 `;
 
-// 🔸 Styled components
 const Section = styled.section`
+  min-height: 100vh; /* Full höjd på alla skärmar */
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,10 +29,14 @@ const Section = styled.section`
   font-family: Arial, sans-serif;
   background-color: rgb(255, 185, 227);
   color: #000;
-  padding: 2.7rem;
+  padding: 2rem 1rem;
 
   @media (min-width: 768px) {
-    padding: 12rem;
+    padding: 4rem 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 6rem 3rem;
   }
 `;
 
@@ -167,7 +172,6 @@ export const Intro = () => {
       >
         <p>Enter my world</p>
       </Button>
-      
     </Section>
   );
 };
