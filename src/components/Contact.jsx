@@ -1,21 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 
-// Wrappers
 const Section = styled.section`
+  min-height: 100vh;
   padding: 128px 16px;
   max-width: 320px;
   margin: 0 auto;
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2rem;
+
+  @media (min-width: 768px) {
+    max-width: none;
+  }
 `;
 
 const Heading = styled.h2`
   font-size: 40px;
   font-weight: 700;
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 `;
 
 const ProfileImage = styled.img`
@@ -50,7 +55,6 @@ const IconsWrapper = styled.div`
   font-size: 24px;
 `;
 
-// Komponent
 export const Contact = ({ heading, name, email, image, socials }) => {
   return (
     <Section id="contact">

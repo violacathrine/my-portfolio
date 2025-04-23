@@ -2,63 +2,86 @@ import React from "react";
 import styled from "styled-components";
 import { ScrollArrow } from "./ScrollArrow";
 
-// Layout
+// 🔸 Wrapper för hela header-sektionen
 const HeaderWrapper = styled.header`
+  height: 100vh;
+  background: white;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding: 1rem;
-  background-color: white;
-
-  @media (min-width: 768px) {
-    padding: 14rem;
-  }
+  justify-content: space-between;
 `;
 
-const HeaderContentRow = styled.div`
-  background: #fff8ee;
+// 🔸 Själva "boken"
+const BookContainer = styled.div`
   display: flex;
   flex-direction: column;
+  flex: 1;
 
   @media (min-width: 768px) {
     flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
+    margin: auto;
+    width: 90%;
+    max-width: 1100px;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
   }
 `;
 
 const TextContent = styled.section`
-  position: relative;
-  padding: 2rem;
-  z-index: 0;
+  background: #fff8ee;
   flex: 1;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: 768px) {
+    padding: 3rem;
+
     &::after {
       content: "";
       position: absolute;
       top: 0;
       right: -1px;
-      width: 24px;
+      width: 2px;
       height: 100%;
-      background: linear-gradient(to left, rgba(0, 0, 0, 0.06), transparent);
-      pointer-events: none;
-      z-index: -1;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
+      z-index: 2;
     }
   }
 `;
 const NavWrapper = styled.section`
   position: relative;
-  padding: 2rem;
-  z-index: 0;
   flex: 1;
+  background-color: #fff8ee;
+  padding: 2rem;
+  z-index: 2;
+
+  // Fejkade sidor bakom
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background: #fff8ee;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.04);
+    z-index: -1;
+  }
+
+  &::after {
+    top: 20px;
+    left: 20px;
+    z-index: -2;
+  }
 
   @media (min-width: 768px) {
-    padding: 2rem;
+    padding: 3rem;
   }
 `;
 
-// Nav list
+// 🔸 Navigation
 const NavList = styled.ul`
   list-style: none;
   padding: 0;
@@ -66,17 +89,15 @@ const NavList = styled.ul`
 `;
 
 const NavItem = styled.li`
-  width: 100%;
   margin-bottom: 1rem;
 `;
 
 const NavLink = styled.a`
   display: flex;
   align-items: center;
-  width: 100%;
-  text-decoration: none;
   font-weight: bold;
   color: #000;
+  text-decoration: none;
 `;
 
 const Title = styled.span`
@@ -87,7 +108,6 @@ const Dots = styled.span`
   flex-grow: 1;
   margin: 0 0.5rem;
   border-bottom: 2px dotted #000;
-  height: 1em;
 `;
 
 const Page = styled.span`
@@ -104,20 +124,18 @@ export const HeaderSection = ({
 }) => {
   return (
     <HeaderWrapper id={id}>
-      <HeaderContentRow>
+      <BookContainer>
         <TextContent>
           <h2>{heading}</h2>
           <p>{text}</p>
           <p>Interested?</p>
           <p>
-            <a href={`mailto:${email}`} aria-label={`Send email to ${email}`}>
-              {mailtoText}
-            </a>{" "}
-            💌
+            <a href={`mailto:${email}`}>{mailtoText}</a> 💌
           </p>
         </TextContent>
 
         <NavWrapper>
+          <h3>CHAPTER</h3>
           <nav>
             <NavList>
               {nav.map((item) => (
@@ -132,7 +150,7 @@ export const HeaderSection = ({
             </NavList>
           </nav>
         </NavWrapper>
-      </HeaderContentRow>
+      </BookContainer>
       <ScrollArrow targetId="tech-anchor" />
     </HeaderWrapper>
   );

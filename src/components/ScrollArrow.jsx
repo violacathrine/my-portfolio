@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import { motion } from "framer-motion";
 
 // 🔁 Bounce-animation
 const bounce = keyframes`
@@ -15,11 +16,12 @@ const bounce = keyframes`
 const ScrollWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin: 2rem;
+  align-items: center;
+  margin: 6rem;
 `;
 
 // 🔽 Själva pil-knappen
-const ArrowButton = styled.button`
+const ArrowButton = styled(motion.button)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +30,16 @@ const ArrowButton = styled.button`
   background: none;
   border: none;
 `;
+
+// 🔽 Animation varianter
+const fadeInUp = {
+  hidden: { opacity: 0, y: -20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 export const ScrollArrow = ({ targetId }) => {
   const handleClick = () => {
@@ -39,7 +51,14 @@ export const ScrollArrow = ({ targetId }) => {
 
   return (
     <ScrollWrapper>
-      <ArrowButton onClick={handleClick} aria-label="Scroll to next section">
+      <ArrowButton
+        onClick={handleClick}
+        aria-label="Scroll to next section"
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.5 }}
+      >
         <svg
           width="29"
           height="36"

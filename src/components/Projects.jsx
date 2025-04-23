@@ -8,11 +8,6 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   gap: 64px;
-
-    @media (min-width: 768px) {
-width: 100%;
-    }
-  }
 `;
 
 const Heading = styled.h2`
@@ -21,10 +16,27 @@ const Heading = styled.h2`
   text-align: center;
 `;
 
+const ProjectsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+`;
+
 const ProjectCard = styled.article`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  @media (min-width: 768px) {
+    flex: 0 1 calc(50% - 32px); /* 2 cards per row with spacing */
+  }
 `;
 
 const Image = styled.img`
@@ -54,12 +66,8 @@ const Tag = styled.span`
   background-color: #000;
   color: #fff;
   padding: 2px 6px;
-  align-items: flex-start;
-  color: #fff;
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
 `;
 
 export const Projects = ({ heading, projects }) => {
@@ -67,27 +75,21 @@ export const Projects = ({ heading, projects }) => {
     <Section id="projects">
       <Heading>{heading}</Heading>
 
-      {projects.map((project) => (
-        <ProjectCard key={project.name}>
-          <Image src={project.image} alt={project.name} />
-          <Title>{project.name}</Title>
-          <Text>{project.text}</Text>
+      <ProjectsWrapper>
+        {projects.map((project) => (
+          <ProjectCard key={project.name}>
+            <Image src={project.image} alt={project.name} />
+            <Title>{project.name}</Title>
+            <Text>{project.text}</Text>
 
-          <TagsWrapper>
-            {project.tags.map((tag) => (
-              <Tag key={tag}>{tag}</Tag>
-            ))}
-          </TagsWrapper>
-
-          {/*<LinksWrapper>
-            {project.links.map((link) => (
-              <LinkButton key={link.href} href={link.href}>
-                {link.label}
-              </LinkButton>
-            ))}
-          </LinksWrapper>*/}
-        </ProjectCard>
-      ))}
+            <TagsWrapper>
+              {project.tags.map((tag) => (
+                <Tag key={tag}>{tag}</Tag>
+              ))}
+            </TagsWrapper>
+          </ProjectCard>
+        ))}
+      </ProjectsWrapper>
     </Section>
   );
 };

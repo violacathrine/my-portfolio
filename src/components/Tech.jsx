@@ -2,45 +2,56 @@ import React from "react";
 import styled from "styled-components";
 
 const Section = styled.section`
-  background-color: rgb(255, 185, 227);
-  color: white;
-  padding-top: 128px;
-  padding-bottom: 128px;
-  padding-left: 16px;
-  padding-right: 16px;
+  min-height: 100vh;
+  background-color: rgb(255, 228, 232);
+  color: #000;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 64px;
-  width: 100%;
-  margin: 0 auto;
+  justify-content: center;
+  padding: 128px 16px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    padding: 0 5rem;
+    text-align: left;
+  }
 `;
 
 const Heading = styled.h2`
-  color: black;
-  text-align: center;
-  font-family: "Montserrat";
-  font-size: 56px;
-  font-style: normal;
+  font-size: 48px;
   font-weight: 700;
-  line-height: normal;
+  font-family: "Montserrat", sans-serif;
+  color: #ff4575;
+  margin-bottom: 64px;
+
+  @media (min-width: 768px) {
+    font-size: 64px;
+    margin-bottom: 0;
+  }
 `;
 
-const Paragraph = styled.p`
-  color: black;
-  font-family: "Hind";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  text-align: left;
+const Text = styled.p`
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Hind", sans-serif;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    margin: 0;
+  }
 `;
 
 export const Tech = ({ heading, items }) => {
   return (
     <Section id="tech">
       <Heading>{heading}</Heading>
-      <Paragraph>{items.join(", ") + "."}</Paragraph>
+      <Text>{items.join(", ") + "."}</Text>
     </Section>
   );
 };
