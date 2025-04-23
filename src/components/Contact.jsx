@@ -1,23 +1,78 @@
 import React from "react";
+import styled from "styled-components";
 
-export const Contact = ({ heading, name, email, socials }) => {
+// Wrappers
+const Section = styled.section`
+  padding: 128px 16px;
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+const Heading = styled.h2`
+  font-size: 40px;
+  font-weight: 700;
+  color:rgb(0, 0, 0);
+`;
+
+const ProfileImage = styled.img`
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+`;
+
+const Name = styled.p`
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+`;
+
+const Email = styled.a`
+  font-weight: 600;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const IconsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 24px;
+`;
+
+// Komponent
+export const Contact = ({ heading, name, email, image, socials }) => {
   return (
-    <section id="contact" className="contact-section">
-      <h2>{heading}</h2>
-      {/*<img src={image} alt={`Portrait of ${name}`} />*/}
-      <p>{name}</p>
-      <p>
-        <a href={`mailto:${email}`}>{email}</a>
-      </p>
-      <ul className="socials-list">
+    <Section id="contact">
+      <Heading>{heading}</Heading>
+      <ProfileImage src={image} alt={name} />
+      <div>
+        <Name>{name}</Name>
+        <Email href={`mailto:${email}`}>{email}</Email>
+      </div>
+      <IconsWrapper>
         {socials.map((social) => (
-          <li key={social.platform}>
-            <a href={social.url} target="_blank" rel="noopener noreferrer">
-              {social.platform}
-            </a>
-          </li>
+          <a
+            key={social.platform}
+            href={social.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={social.platform}
+          >
+            {social.icon}
+          </a>
         ))}
-      </ul>
-    </section>
+      </IconsWrapper>
+    </Section>
   );
 };

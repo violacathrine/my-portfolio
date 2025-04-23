@@ -45,34 +45,16 @@ const TagsWrapper = styled.div`
 `;
 
 const Tag = styled.span`
+  font-family: "Montserrat";
   background-color: #000;
   color: #fff;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.75rem;
-  border-radius: 4px;
-`;
-
-const LinkButton = styled.a`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+  padding: 2px 6px;
+  align-items: flex-start;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 600;
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  background: #eee;
-  border-radius: 999px;
-  text-decoration: none;
-  color: #000;
-
-  &:hover {
-    background: #ddd;
-  }
-`;
-
-const LinksWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  line-height: normal;
 `;
 
 export const Projects = ({ heading, projects }) => {
@@ -92,22 +74,13 @@ export const Projects = ({ heading, projects }) => {
             ))}
           </TagsWrapper>
 
-          <LinksWrapper>
-            <LinkButton
-              href={project.netlify}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              🌍 Live demo
-            </LinkButton>
-            <LinkButton
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              🛠️ View the code
-            </LinkButton>
-          </LinksWrapper>
+          {/*<LinksWrapper>
+            {project.links.map((link) => (
+              <LinkButton key={link.href} href={link.href}>
+                {link.label}
+              </LinkButton>
+            ))}
+          </LinksWrapper>*/}
         </ProjectCard>
       ))}
     </Section>

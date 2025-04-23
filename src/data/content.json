@@ -46,8 +46,16 @@
         "image": "/mockup-morbidgene.png",
         "text": "This website is built with HTML5, CSS3 and JavaScript and was one of my very first projects i built in this bootcamp.  It’s an official site for the band and i’m still working on it. My plan for the project is to expand the subpages and update it with more photos from their gigs.",
         "tags": ["HTML5", "CSS3", "JavaScript"],
-        "netlify": "link",
-        "github": "link"
+        "links": [
+          {
+            "label": "Live demo",
+            "href": "https://morbidgeneofficial.com/"
+          },
+          {
+            "label": "View the code",
+            "href": "https://github.com/violacathrine/morbid-gene-official"
+          }
+        ]
       },
       {
         "name": "Weather app",
@@ -62,7 +70,7 @@
 
   "myJourney": {
     "heading": "My Journey",
-    "text": "I’ve been a creative soul for as long as I can remember. What truly drives me is that deep sense of curiosity and the joy I feel when I get to explore, build, and solve. When I’m fully immersed in a challenge  whether it's solving a tricky bug or designing an engaging user experience – I find a sense of calm and focus that I absolutely love.Tech gives me the perfect mix of creativity and logic. I thrive on digging into the details, being analytical and stubborn when needed, and seeing how every small piece contributes to something greater. Watching an idea grow from scratch into a functional, visual experience – where design, interactivity, and problem-solving meet – is pure magic to me. With several years of experience in logistics, sales, and customer service, I’ve developed strong problem-solving skills and a deep understanding of how to work efficiently in fast-paced environments. This background has also given me a strong user-focused mindset – I always think about how things will feel and function for the end user. Now, I’m combining all those strengths in my journey into tech. Whether it’s writing code, creating accessible and responsive web interfaces, or simply learning something new."
+    "text": "I’ve been a creative soul for as long as I can remember. What truly drives me is that deep sense of curiosity and the joy I feel when I get to explore, build, and solve. When I’m fully immersed in a challenge  whether it's solving a tricky bug or designing an engaging user experience - I actually find a sense of calm and focus that I absolutely love. Tech gives me the perfect mix of creativity and logic.\nI I thrive on digging into the details, being analytical and stubborn when needed, and seeing how every small piece contributes to something greater. Watching an idea grow from scratch into a functional, visual experience - where design, interactivity, and problem-solving meet - is pure magic to me.\nI With several years of experience in logistics, sales, and customer service, I’ve developed strong problem-solving skills and a deep understanding of how to work efficiently in fast-paced environments. This background has also given me a strong user-focused mindset - I always think about how things will feel and function for the end user. Now, I’m combining all those strengths in my journey into tech. Whether it’s writing code, creating accessible and responsive web interfaces, or simply learning something new."
   },
 
   "skills": {
@@ -105,27 +113,27 @@
     ]
   },
 
-  "contact": {
-    "heading": "Let’s talk",
-    "name": "Cathrine Olsson",
-    "email": "cathrineohlsson@live.se",
-    "image": "/profile-picture.jpg",
-    "socials": [
-      {
-        "platform": "LinkedIn",
-        "url": "https://linkedin.com/in/din-profil",
-        "icon": "linkedin"
-      },
-      {
-        "platform": "GitHub",
-        "url": "https://github.com/din-användare",
-        "icon": "github"
-      },
-      {
-        "platform": "Instagram",
-        "url": "https://instagram.com/din-profil",
-        "icon": "instagram"
-      }
-    ]
-  }
+"contact": {
+  "heading": "Let's talk",
+  "name": "Cathrine Olsson",
+  "email": "cathrineohlsson@live.se",
+  "image": "/profile-picture.jpg",
+  "socials": [
+    {
+      "platform": "LinkedIn",
+      "link": "https://linkedin.com/in/...",
+      "icon": "🔗"
+    },
+    {
+      "platform": "GitHub",
+      "link": "https://github.com/violacathrine",
+      "icon": "🐙"
+    },
+    {
+      "platform": "Instagram",
+      "link": "https://instagram.com/...",
+      "icon": "📷"
+    }
+  ]
+}
 }
