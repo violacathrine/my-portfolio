@@ -9,6 +9,7 @@ const HeaderWrapper = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #fff8ee;
 `;
 
 // 🔸 Själva "boken"
@@ -20,61 +21,31 @@ const BookContainer = styled.div`
   @media (min-width: 768px) {
     flex-direction: row;
     margin: auto;
-    width: 90%;
+    width: 100%;
     max-width: 1100px;
     height: 100%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    padding-top: 3rem;
+    align-items: center;
   }
 `;
 
 const TextContent = styled.section`
-  background: #fff8ee;
-  flex: 1;
-  padding: 2rem;
   position: relative;
-  z-index: 1;
+  flex: 1;
+  background-color: #fff8ee;
+  padding: 1rem;
+  z-index: 2;
 
   @media (min-width: 768px) {
     padding: 3rem;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: -1px;
-      width: 2px;
-      height: 100%;
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
-      z-index: 2;
-    }
   }
 `;
+
 const NavWrapper = styled.section`
   position: relative;
   flex: 1;
   background-color: #fff8ee;
-  padding: 2rem;
   z-index: 2;
-
-  // Fejkade sidor bakom
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 100%;
-    height: 100%;
-    background: #fff8ee;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.04);
-    z-index: -1;
-  }
-
-  &::after {
-    top: 20px;
-    left: 20px;
-    z-index: -2;
-  }
 
   @media (min-width: 768px) {
     padding: 3rem;
