@@ -28,7 +28,7 @@ const Section = styled.section`
   font-family: Arial, sans-serif;
   background-color: rgb(255, 185, 227);
   color: #000;
-  padding: 2.6rem;
+  padding: 2.7rem;
 
   @media (min-width: 768px) {
     padding: 12rem;

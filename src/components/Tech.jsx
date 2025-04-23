@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Section = styled.section`
+  background-color: rgb(255, 185, 227);
   color: white;
   padding-top: 128px;
   padding-bottom: 128px;

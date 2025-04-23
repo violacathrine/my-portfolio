@@ -7,6 +7,7 @@ import { Projects } from "./components/Projects";
 import { MyJourney } from "./components/MyJourney";
 import { Skills } from "./components/Skills";
 import { Contact } from "./components/Contact";
+import { WaveLine } from "./components/WaveLine";
 
 export const App = () => {
   return (
@@ -39,8 +40,14 @@ export const App = () => {
         text={content.myJourney.text}
       />
 
+      {/* WAVELINE DIVIDER */}
+      <WaveLine />
+
       {/* SKILLS */}
       <Skills heading={content.skills.heading} groups={content.skills.groups} />
+
+      {/* WAVELINE DIVIDER */}
+      <WaveLine />
 
       {/* CONTACT */}
       <Contact

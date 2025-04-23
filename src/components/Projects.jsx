@@ -2,12 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 const Section = styled.section`
+  background-color: white;
   padding: 128px 16px;
-  max-width: 320px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 64px;
+
+    @media (min-width: 768px) {
+width: 100%;
+    }
+  }
 `;
 
 const Heading = styled.h2`
