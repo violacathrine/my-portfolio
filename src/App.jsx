@@ -12,12 +12,12 @@ import { WaveLine } from "./components/WaveLine";
 export const App = () => {
   return (
     <>
-      {/* INTRO - ligger alltid först */}
+      {/* INTRO */}
       <Intro />
 
-      {/* HEADERSECTION - ge ID för scroll */}
+      {/* HEADERSECTION */}
       <HeaderSection
-        id="header-section" // 👈 viktigt!
+        id="header-section"
         heading={content.headerSection.heading}
         text={content.headerSection.text}
         email={content.headerSection.email}
@@ -40,14 +40,14 @@ export const App = () => {
         text={content.myJourney.text}
       />
 
-      {/* WAVELINE DIVIDER */}
-      <WaveLine />
+      {/* WAVELINE DIVIDER
+      <WaveLine /> */}
 
       {/* SKILLS */}
       <Skills heading={content.skills.heading} groups={content.skills.groups} />
 
-      {/* WAVELINE DIVIDER */}
-      <WaveLine />
+      {/* WAVELINE DIVIDER
+      <WaveLine /> */}
 
       {/* CONTACT */}
       <Contact

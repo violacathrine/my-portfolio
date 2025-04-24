@@ -2,7 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 
-// 🔁 Bounce-animation
+//  Bounce-animation
 const bounce = keyframes`
   0%, 100% {
     transform: translateY(0);
@@ -12,15 +12,16 @@ const bounce = keyframes`
   }
 `;
 
-// 🔽 Wrapper som centrerar pilen
+//  Wrapper som centrerar pilen
 const ScrollWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 6rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 `;
 
-// 🔽 Själva pil-knappen
+// Själva pil-knappen
 const ArrowButton = styled(motion.button)`
   display: flex;
   justify-content: center;
@@ -31,7 +32,7 @@ const ArrowButton = styled(motion.button)`
   border: none;
 `;
 
-// 🔽 Animation varianter
+// Animation varianter
 const fadeInUp = {
   hidden: { opacity: 0, y: -20 },
   visible: {

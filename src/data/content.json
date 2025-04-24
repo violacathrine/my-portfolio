@@ -42,28 +42,76 @@
     "heading": "Projects",
     "projects": [
       {
-        "name": "Morbid Gene Official",
-        "image": "/mockup-morbidgene.png",
-        "text": "This website is built with HTML5, CSS3 and JavaScript and was one of my very first projects i built in this bootcamp.  It’s an official site for the band and i’m still working on it. My plan for the project is to expand the subpages and update it with more photos from their gigs.",
-        "tags": ["HTML5", "CSS3", "JavaScript"],
-        "links": [
+        "name": "Web Accessibility Quiz",
+        "image": "/webaccessibility.png",
+        "text": "This project focus on web accessibility. The goal was to learn how to develop inclusive digital experiences that work for everyone, regardless of their functional ability. We worked with semantic HTML, proper use of ARIA attributes, clear color contrast, keyboard navigation, and responsive design. ",
+        "tags": ["HTML", "CSS", "JavaScript"],
+        "buttons": [
           {
             "label": "Live demo",
+            "type": "demo",
+            "href": "https://accessibility-project.netlify.app/"
+          },
+          {
+            "label": "View the code",
+            "type": "code",
+            "href": "https://github.com/violacathrine/js-project-accessibility"
+          }
+        ]
+      },
+      {
+        "name": "Morbid Gene Official",
+        "image": "/mockup-morbidgene.png",
+        "text": "This website is built with HTML, CSS and JavaScript and was one of my very first projects i built.  It’s the official site for the band Morbid Gene. This project is my favourite since i actually had to work with the client's expactations and really cool content.",
+        "tags": ["HTML", "CSS", "JavaScript"],
+        "buttons": [
+          {
+            "label": "Live demo",
+            "type": "demo",
             "href": "https://morbidgeneofficial.com/"
           },
           {
             "label": "View the code",
+            "type": "code",
             "href": "https://github.com/violacathrine/morbid-gene-official"
           }
         ]
       },
       {
         "name": "Weather app",
-        "image": "https://images.unsplash.com/photo-1520792532857-293bd046307a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
-        "text": "This project focus on web accessibility. The goal was to learn how to develop inclusive digital experiences that work for everyone, regardless of their functional ability. We worked with semantic HTML, proper use of ARIA attributes, clear color contrast, keyboard navigation, and responsive design.",
-        "tags": ["HTML5", "CSS3", "JavaScript", "TypeScript", "APIs"],
-        "netlify": "link",
-        "github": "link"
+        "image": "/weatherapp.png",
+        "text": "This weather app was a group project were we worked with API:s from Openweather. We used TypeScript and workd with several branches in Git and learned how to solve merge-conflict if there was any. It was really fun and motivating to work together.",
+        "tags": ["HTML", "CSS", "JavaScript", "TypeScript", "APIs"],
+        "buttons": [
+          {
+            "label": "Live demo",
+            "type": "demo",
+            "href": "https://earth2weather.netlify.app/"
+          },
+          {
+            "label": "View the code",
+            "type": "code",
+            "href": "https://github.com/casalm26/js-project-weather-app"
+          }
+        ]
+      },
+      {
+        "name": "Recipe Library",
+        "image": "/recipelibrary.png",
+        "text": "This project is built with API:s from Spoonacular to dynamically show real recipes. It was alot of fun working with this project since we were following a finished design in Figma, but with a little personal tweak.",
+        "tags": ["HTML", "CSS", "JavaScript", "APIs"],
+        "buttons": [
+          {
+            "label": "Live demo",
+            "type": "demo",
+            "href": "https://cathirecipesite.netlify.app/"
+          },
+          {
+            "label": "View the code",
+            "type": "code",
+            "href": "https://github.com/violacathrine/js-project-recipe-library"
+          }
+        ]
       }
     ]
   },
@@ -113,27 +161,27 @@
     ]
   },
 
-"contact": {
-  "heading": "Let's talk",
-  "name": "Cathrine Olsson",
-  "email": "cathrineohlsson@live.se",
-  "image": "/profile-picture.jpg",
-  "socials": [
-    {
-      "platform": "LinkedIn",
-      "link": "https://linkedin.com/in/...",
-      "icon": "🔗"
-    },
-    {
-      "platform": "GitHub",
-      "link": "https://github.com/violacathrine",
-      "icon": "🐙"
-    },
-    {
-      "platform": "Instagram",
-      "link": "https://instagram.com/...",
-      "icon": "📷"
-    }
-  ]
-}
+  "contact": {
+    "heading": "Let's talk",
+    "name": "Cathrine Olsson",
+    "email": "cathrineohlsson@live.se",
+    "image": "/profile-picture.jpg",
+    "socials": [
+      {
+        "platform": "LinkedIn",
+        "link": "https://linkedin.com/in/...",
+        "icon": "🔗"
+      },
+      {
+        "platform": "GitHub",
+        "link": "https://github.com/violacathrine",
+        "icon": "🐙"
+      },
+      {
+        "platform": "Instagram",
+        "link": "https://instagram.com/...",
+        "icon": "📷"
+      }
+    ]
+  }
 }

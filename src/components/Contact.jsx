@@ -18,7 +18,7 @@ const Section = styled.section`
 `;
 
 const Heading = styled.h2`
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 700;
   color: rgb(0, 0, 0);
 `;
@@ -29,12 +29,21 @@ const ProfileImage = styled.img`
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
 `;
 
 const Name = styled.p`
   font-weight: 600;
   font-size: 18px;
   margin: 0;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 const Email = styled.a`
@@ -45,6 +54,10 @@ const Email = styled.a`
 
   &:hover {
     text-decoration: underline;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 25px;
   }
 `;
 

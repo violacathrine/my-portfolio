@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const Section = styled.section`
+  background-color: rgb(255, 255, 255);
   padding: 128px 16px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 64px;
-  background-color: white;
 `;
 
 const Heading = styled.h2`

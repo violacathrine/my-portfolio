@@ -19,15 +19,14 @@ const bounceIn = keyframes`
 `;
 
 const Section = styled.section`
-  min-height: 100vh; /* Full höjd på alla skärmar */
-  width: 100%;
+  min-height: 100vh;
+  width: 100vw; /* Full width of the viewport */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: Arial, sans-serif;
-  background-color: rgb(255, 185, 227);
+  background-color: rgb(255, 228, 232);
   color: #000;
   padding: 2rem 1rem;
 
@@ -107,7 +106,7 @@ const Button = styled.button`
   border: none;
   background: none;
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 2rem;
 
   p {
     margin: 0;
@@ -170,7 +169,7 @@ export const Intro = () => {
         onClick={handleEnter}
         aria-label="Enter the main portfolio content"
       >
-        <p>Enter my world</p>
+        Enter my world
       </Button>
     </Section>
   );

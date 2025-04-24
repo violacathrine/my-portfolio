@@ -9,29 +9,32 @@ export const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-background-color: rgb(255, 185, 227);
     color: #000;
-    font-family: 'Hind', sans-serif;
+    background-color: rgb(255, 228, 232);
+
   }
 
 
   h1, h2, h3 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
+    font-family: "Montserrat";
     margin: 0 0 1rem;
   }
 
 
   p {
-    font-family: 'Hind', sans-serif;
+    font-family: "Hind";
     font-weight: 400;
     line-height: 1.6;
     margin: 0 0 1rem;
   }
 
+  li {
+  font-family: "Hind";
+  }
+
   a {
     color: inherit;
-    text-decoration: underline;
-    font-family: "Montserrat",
+    font-family: "Hind";
+    text-decoration: none;
   }
 `;

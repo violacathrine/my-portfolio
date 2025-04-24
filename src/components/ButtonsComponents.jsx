@@ -1,0 +1,52 @@
+import React from "react";
+import styled from "styled-components";
+import { FaGithub } from "react-icons/fa";
+import { SlGlobe } from "react-icons/sl";
+
+export const ButtonsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 2rem;
+  }
+`;
+
+const Button = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background-color: #f4f4f4;
+  color: #1a1a1a;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 7px 16px;
+  border-radius: 40px;
+  transition: background-color 0.3s;
+  width: fit-content; /* ✅ Gör så att den bara är så bred som innehållet */
+  max-width: 100%; /* ⛔️ Hindrar overflow */
+  white-space: nowrap; /* ✅ Håller texten på en rad */
+
+  &:hover {
+    background-color: #eaeaea;
+  }
+
+  svg {
+    font-size: 24px;
+  }
+`;
+
+export const ProjectButton = ({ type, label, href }) => {
+  const Icon = type === "demo" ? SlGlobe : FaGithub;
+
+  return (
+    <Button href={href} target="_blank" rel="noopener noreferrer">
+      <Icon />
+      {label}
+    </Button>
+  );
+};

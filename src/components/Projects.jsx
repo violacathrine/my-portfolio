@@ -1,5 +1,7 @@
+// src/components/Projects.jsx
 import React from "react";
 import styled from "styled-components";
+import { ProjectButton, ButtonsWrapper } from "./ButtonsComponents";
 
 const Section = styled.section`
   background-color: white;
@@ -22,20 +24,21 @@ const ProjectsWrapper = styled.div`
   gap: 64px;
 
   @media (min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 `;
 
 const ProjectCard = styled.article`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 
   @media (min-width: 768px) {
-    flex: 0 1 calc(50% - 32px); /* 2 cards per row with spacing */
+    flex-direction: row;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: flex-start;
   }
 `;
 
@@ -43,6 +46,21 @@ const Image = styled.img`
   width: 100%;
   border-radius: 8px;
   object-fit: cover;
+
+  @media (min-width: 768px) {
+    width: 45%;
+    height: auto;
+  }
+`;
+
+const ContentWrapper = styled.div`
+  flex: 2;
+  padding-top: 1rem;
+
+  @media (min-width: 768px) {
+    padding-left: 2rem;
+    padding-top: 0;
+  }
 `;
 
 const Title = styled.h3`
@@ -79,14 +97,26 @@ export const Projects = ({ heading, projects }) => {
         {projects.map((project) => (
           <ProjectCard key={project.name}>
             <Image src={project.image} alt={project.name} />
-            <Title>{project.name}</Title>
-            <Text>{project.text}</Text>
+            <ContentWrapper>
+              <Title>{project.name}</Title>
+              <Text>{project.text}</Text>
+              <TagsWrapper>
+                {project.tags.map((tag) => (
+                  <Tag key={tag}>{tag}</Tag>
+                ))}
+              </TagsWrapper>
 
-            <TagsWrapper>
-              {project.tags.map((tag) => (
-                <Tag key={tag}>{tag}</Tag>
-              ))}
-            </TagsWrapper>
+              <ButtonsWrapper>
+                {project.buttons.map((btn, index) => (
+                  <ProjectButton
+                    key={index}
+                    type={btn.type}
+                    label={btn.label}
+                    href={btn.href}
+                  />
+                ))}
+              </ButtonsWrapper>
+            </ContentWrapper>
           </ProjectCard>
         ))}
       </ProjectsWrapper>

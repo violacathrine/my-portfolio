@@ -4,8 +4,9 @@ import { ScrollArrow } from "./ScrollArrow";
 
 // 🔸 Wrapper för hela header-sektionen
 const HeaderWrapper = styled.header`
+  position: relative;
   height: 100vh;
-  background: white;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,15 +17,14 @@ const HeaderWrapper = styled.header`
 const BookContainer = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1; // detta är det viktiga!
+  padding-top: 3rem;
 
   @media (min-width: 768px) {
     flex-direction: row;
     margin: auto;
-    width: 100%;
     max-width: 1100px;
-    height: 100%;
-    padding-top: 3rem;
+    width: 100%;
     align-items: center;
   }
 `;
@@ -46,6 +46,7 @@ const NavWrapper = styled.section`
   flex: 1;
   background-color: #fff8ee;
   z-index: 2;
+  padding: 1rem;
 
   @media (min-width: 768px) {
     padding: 3rem;
@@ -99,9 +100,8 @@ export const HeaderSection = ({
         <TextContent>
           <h2>{heading}</h2>
           <p>{text}</p>
-          <p>Interested?</p>
           <p>
-            <a href={`mailto:${email}`}>{mailtoText}</a> 💌
+            Interested? <a href={`mailto:${email}`}>{mailtoText}</a> 💌
           </p>
         </TextContent>
 
