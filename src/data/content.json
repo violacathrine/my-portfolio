@@ -98,7 +98,7 @@
       {
         "name": "Recipe Library",
         "image": "/recipelibrary.png",
-        "text": "This project is built with API:s from Spoonacular to dynamically show real recipes. It was alot of fun working with this project since we were following a finished design in Figma, but with a little personal tweak.",
+        "text": "This project is built with API:s from Spoonacular to dynamically show real recipes. It was a lot of fun working with this project since we were following a finished design in Figma, but with a little personal tweak.",
         "tags": ["HTML", "CSS", "JavaScript", "APIs"],
         "buttons": [
           {
