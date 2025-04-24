@@ -80,7 +80,7 @@
       {
         "name": "Weather app",
         "image": "/weatherapp.png",
-        "text": "This weather app was a group project were we worked with API:s from Openweather. We used TypeScript and workd with several branches in Git and learned how to solve merge-conflict if there was any. It was really fun and motivating to work together.",
+        "text": "This weather app was a group project were we worked with API:s from Openweather. We used TypeScript and work with several branches in Git and learned how to solve merge-conflict if there was any. It was really fun and motivating to work together.",
         "tags": ["HTML", "CSS", "JavaScript", "TypeScript", "APIs"],
         "buttons": [
           {
