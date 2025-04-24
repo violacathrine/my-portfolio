@@ -169,18 +169,11 @@
     "socials": [
       {
         "platform": "LinkedIn",
-        "link": "https://linkedin.com/in/...",
-        "icon": "🔗"
+        "link": "https://www.linkedin.com/in/cathrine-olsson-306695147/"
       },
       {
         "platform": "GitHub",
-        "link": "https://github.com/violacathrine",
-        "icon": "🐙"
-      },
-      {
-        "platform": "Instagram",
-        "link": "https://instagram.com/...",
-        "icon": "📷"
+        "link": "https://github.com/violacathrine"
       }
     ]
   }
