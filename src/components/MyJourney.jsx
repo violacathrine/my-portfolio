@@ -40,7 +40,7 @@ const Hole = styled.div`
   position: absolute;
   width: 16px;
   height: 16px;
-  background-color: #fff; /* Samma som bakgrundsfärg runt om sektionen */
+  background-color: #fff;
   border: 2px solid #aaa;
   border-radius: 50%;
   z-index: 2;
@@ -48,11 +48,8 @@ const Hole = styled.div`
 
 const Holes = () => (
   <>
-    {/* Vänster kolumn */}
     <Hole style={{ top: "64px", left: "32px" }} />
     <Hole style={{ bottom: "64px", left: "32px" }} />
-
-    {/* Höger kolumn */}
     <Hole style={{ top: "120px", left: "32px" }} />
     <Hole style={{ bottom: "120px", left: "32px" }} />
   </>
@@ -62,9 +59,9 @@ const Heading = styled.h2`
   font-size: 48px;
   font-weight: 700;
   text-align: center;
-  margin: 0 auto; // Centrerar i container
-  padding-left: 0; // Ingen sidopadding
-  width: fit-content; // Gör så att den inte fyller hela bredden
+  margin: 0 auto;
+  padding-left: 0;
+  width: fit-content;
   z-index: 3;
 `;
 
@@ -75,6 +72,23 @@ const Paragraph = styled.p`
   z-index: 3;
 `;
 
+const Highlight = styled.span`
+  background-color:rgba(255, 244, 147, 0.56);
+  padding: 0 2px;
+`;
+
+// 🔸 Tolka [[markerat]] i content.json
+function parseHighlight(text) {
+  const parts = text.split(/(\[\[.*?\]\])/g);
+  return parts.map((part, i) =>
+    part.startsWith("[[") && part.endsWith("]]") ? (
+      <Highlight key={i}>{part.slice(2, -2)}</Highlight>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+}
+
 export const MyJourney = ({ heading, text }) => {
   const paragraphs = text.split("\n");
 
@@ -84,7 +98,7 @@ export const MyJourney = ({ heading, text }) => {
       <Holes />
       <Heading>{heading}</Heading>
       {paragraphs.map((para, index) => (
-        <Paragraph key={index}>{para}</Paragraph>
+        <Paragraph key={index}>{parseHighlight(para)}</Paragraph>
       ))}
     </Section>
   );

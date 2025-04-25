@@ -44,7 +44,12 @@ export const ProjectButton = ({ type, label, href }) => {
   const Icon = type === "demo" ? SlGlobe : FaGithub;
 
   return (
-    <Button href={href} target="_blank" rel="noopener noreferrer">
+    <Button
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+    >
       <Icon />
       {label}
     </Button>

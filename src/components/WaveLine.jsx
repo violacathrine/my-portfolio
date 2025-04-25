@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-display: flex;
+  display: flex;
   width: 100%;
   overflow: hidden;
   line-height: 0;

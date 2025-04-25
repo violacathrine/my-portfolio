@@ -1,4 +1,3 @@
-// src/App.jsx
 import content from "./data/content.json";
 import { Intro } from "./components/Intro";
 import { HeaderSection } from "./components/HeaderSection";
@@ -40,14 +39,8 @@ export const App = () => {
         text={content.myJourney.text}
       />
 
-      {/* WAVELINE DIVIDER
-      <WaveLine /> */}
-
       {/* SKILLS */}
       <Skills heading={content.skills.heading} groups={content.skills.groups} />
-
-      {/* WAVELINE DIVIDER
-      <WaveLine /> */}
 
       {/* CONTACT */}
       <Contact

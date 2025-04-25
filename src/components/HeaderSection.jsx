@@ -70,6 +70,11 @@ const NavLink = styled.a`
   font-weight: bold;
   color: #000;
   text-decoration: none;
+
+  &:hover {
+    background-color:rgba(255, 69, 116, 0.19);
+    color: rgb(0, 0, 0); /* Lite ljusare grå ton */
+  }
 `;
 
 const Title = styled.span`

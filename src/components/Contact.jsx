@@ -78,9 +78,11 @@ const SocialIconLink = styled.a`
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  color: #d0d0d0;
+  color:rgb(0, 0, 0);
   font-size: 24px;
-  transition: background-color 0.3s, transform 0.3s;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
 
   &:hover {
     transform: scale(1.1);
