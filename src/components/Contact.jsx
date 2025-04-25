@@ -55,7 +55,7 @@ const Email = styled.a`
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   @media (min-width: 768px) {
@@ -78,7 +78,7 @@ const SocialIconLink = styled.a`
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   font-size: 24px;
   transition:
     background-color 0.3s,
