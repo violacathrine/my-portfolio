@@ -14,11 +14,17 @@ const bounce = keyframes`
 
 //  Wrapper som centrerar pilen
 const ScrollWrapper = styled.div`
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 63px;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+  }
 `;
 
 // Själva pil-knappen

@@ -5,7 +5,7 @@ import { ScrollArrow } from "./ScrollArrow";
 // 🔸 Wrapper för hela header-sektionen
 const HeaderWrapper = styled.header`
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -72,7 +72,7 @@ const NavLink = styled.a`
   text-decoration: none;
 
   &:hover {
-    background-color:rgba(255, 69, 116, 0.19);
+    background-color: rgba(255, 69, 116, 0.19);
     color: rgb(0, 0, 0); /* Lite ljusare grå ton */
   }
 `;
@@ -126,8 +126,8 @@ export const HeaderSection = ({
             </NavList>
           </nav>
         </NavWrapper>
+        <ScrollArrow targetId="tech-anchor" />
       </BookContainer>
-      <ScrollArrow targetId="tech-anchor" />
     </HeaderWrapper>
   );
 };
