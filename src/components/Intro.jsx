@@ -108,12 +108,12 @@ const Button = styled.button`
   cursor: pointer;
   margin-top: 2rem;
   font-size: 20px;
-  font-weight: 600;
 
   p {
     margin: 0;
     position: relative;
     z-index: 2;
+    font-weight: bold;
   }
 
   svg {
