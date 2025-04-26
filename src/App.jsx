@@ -6,7 +6,6 @@ import { Projects } from "./components/Projects";
 import { MyJourney } from "./components/MyJourney";
 import { Skills } from "./components/Skills";
 import { Contact } from "./components/Contact";
-import { WaveLine } from "./components/WaveLine";
 
 export const App = () => {
   return (

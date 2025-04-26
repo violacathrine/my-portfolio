@@ -1,5 +1,3 @@
-// src/components/Projects.jsx
-import React from "react";
 import styled from "styled-components";
 import { ProjectButton, ButtonsWrapper } from "./ButtonsComponents";
 

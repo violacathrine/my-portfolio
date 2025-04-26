@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { ScrollArrow } from "./ScrollArrow";
 
@@ -35,9 +34,6 @@ const TextContent = styled.section`
   flex: 1;
   padding: 1rem;
   z-index: 2;
-
-  @media (min-width: 768px) {
-    padding: 3rem;
   }
 `;
 
@@ -46,10 +42,6 @@ const NavWrapper = styled.section`
   flex: 1;
   z-index: 2;
   padding: 1rem;
-
-  @media (min-width: 768px) {
-    padding: 1rem;
-  }
 `;
 
 // Navigation
