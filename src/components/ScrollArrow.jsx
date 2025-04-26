@@ -12,7 +12,7 @@ const bounce = keyframes`
   }
 `;
 
-//  Wrapper som centrerar pilen
+//  Wrapper for ScrollArrow to center
 const ScrollWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@ const ScrollWrapper = styled.div`
   }
 `;
 
-// Själva pil-knappen
+// The "Arrow"
 const ArrowButton = styled(motion.button)`
   display: flex;
   justify-content: center;
@@ -38,7 +38,7 @@ const ArrowButton = styled(motion.button)`
   border: none;
 `;
 
-// Animation varianter
+// Animation
 const fadeInUp = {
   hidden: { opacity: 0, y: -20 },
   visible: {

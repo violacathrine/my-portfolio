@@ -44,6 +44,7 @@ const Text = styled.p`
   @media (min-width: 768px) {
     font-size: 18px;
     margin: 0;
+    padding-left: 3rem;
   }
 `;
 

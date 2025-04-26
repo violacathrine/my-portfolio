@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { ScrollArrow } from "./ScrollArrow";
 
-// 🔸 Wrapper för hela header-sektionen
+
 const HeaderWrapper = styled.header`
   position: relative;
   min-height: 100vh;
@@ -13,11 +13,11 @@ const HeaderWrapper = styled.header`
   background-color: #fff8ee;
 `;
 
-// 🔸 Själva "boken"
+// The "Book"
 const BookContainer = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 1; // detta är det viktiga!
+  flex: 1;
   padding-top: 3rem;
 
   @media (min-width: 768px) {
@@ -26,13 +26,13 @@ const BookContainer = styled.div`
     max-width: 1100px;
     width: 100%;
     align-items: center;
+    padding-top: 1rem;
   }
 `;
 
 const TextContent = styled.section`
   position: relative;
   flex: 1;
-  background-color: #fff8ee;
   padding: 1rem;
   z-index: 2;
 
@@ -44,16 +44,15 @@ const TextContent = styled.section`
 const NavWrapper = styled.section`
   position: relative;
   flex: 1;
-  background-color: #fff8ee;
   z-index: 2;
   padding: 1rem;
 
   @media (min-width: 768px) {
-    padding: 3rem;
+    padding: 1rem;
   }
 `;
 
-// 🔸 Navigation
+// Navigation
 const NavList = styled.ul`
   list-style: none;
   padding: 0;
@@ -126,7 +125,7 @@ export const HeaderSection = ({
             </NavList>
           </nav>
         </NavWrapper>
-        <ScrollArrow targetId="tech-anchor" />
+        <ScrollArrow targetId="tech" />
       </BookContainer>
     </HeaderWrapper>
   );

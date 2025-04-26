@@ -27,9 +27,9 @@ const Button = styled.a`
   padding: 7px 16px;
   border-radius: 40px;
   transition: background-color 0.3s;
-  width: fit-content; /* ✅ Gör så att den bara är så bred som innehållet */
-  max-width: 100%; /* ⛔️ Hindrar overflow */
-  white-space: nowrap; /* ✅ Håller texten på en rad */
+  width: fit-content; 
+  max-width: 100%;
+  white-space: nowrap; 
 
   &:hover {
     background-color: #eaeaea;

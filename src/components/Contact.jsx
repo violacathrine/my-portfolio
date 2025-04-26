@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
-// 🔸 Layout
+//  Layout
 const Section = styled.section`
   min-height: 100vh;
   padding: 128px 16px;
@@ -63,7 +63,7 @@ const Email = styled.a`
   }
 `;
 
-// 🔸 Ikoner
+// Icons
 const IconsWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -89,13 +89,12 @@ const SocialIconLink = styled.a`
   }
 `;
 
-// 🔸 Plattform → ikon
 const iconMap = {
   LinkedIn: FaLinkedinIn,
   GitHub: FaGithub,
 };
 
-// 🔸 Component
+
 export const Contact = ({ heading, name, email, image, socials }) => {
   return (
     <Section id="contact">

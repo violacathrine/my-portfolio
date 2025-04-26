@@ -5,8 +5,6 @@ import styled from "styled-components";
 const Section = styled.section`
   background-color: #fff8ee;
   padding: 128px 16px;
-  padding-left: 80px;
-  padding-right: 30px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -24,7 +22,7 @@ const Section = styled.section`
 const RulingLines = styled.div`
   position: absolute;
   top: 0;
-  left: 64px;
+  left: 0px;
   right: 0;
   height: 100%;
   background: repeating-linear-gradient(
@@ -34,23 +32,32 @@ const RulingLines = styled.div`
     #f1d7c9 24px
   );
   z-index: 1;
+
+  @media (min-width: 768px) {
+  left: 80px;
+}
 `;
 
 const Hole = styled.div`
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
-  border: 2px solid #aaa;
-  border-radius: 50%;
-  z-index: 2;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(255, 228, 232);
+    border: 2px solid #aaa;
+    border-radius: 50%;
+    z-index: 2;
+  }
 `;
 
 const Holes = () => (
   <>
-    <Hole style={{ top: "64px", left: "32px" }} />
-    <Hole style={{ bottom: "64px", left: "32px" }} />
     <Hole style={{ top: "120px", left: "32px" }} />
+    <Hole style={{ bottom: "200px", left: "32px" }} />
+    <Hole style={{ top: "200px", left: "32px" }} />
     <Hole style={{ bottom: "120px", left: "32px" }} />
   </>
 );
@@ -70,14 +77,18 @@ const Paragraph = styled.p`
   line-height: 1.6;
   position: relative;
   z-index: 3;
+
+    @media (min-width: 768px) {
+  padding-left: 80px;
+}
 `;
 
 const Highlight = styled.span`
-  background-color:rgba(255, 244, 147, 0.56);
+  background-color: rgba(255, 244, 147, 0.56);
   padding: 0 2px;
 `;
 
-// 🔸 Tolka [[markerat]] i content.json
+//
 function parseHighlight(text) {
   const parts = text.split(/(\[\[.*?\]\])/g);
   return parts.map((part, i) =>

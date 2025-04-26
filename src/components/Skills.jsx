@@ -39,7 +39,7 @@ const Group = styled(motion.div)`
   text-align: center;
 `;
 
-// Dynamisk färg för badges
+// Badge Colors
 const badgeColors = {
   Code: "#ff4575",
   Toolbox: "#3b9eff",
@@ -56,7 +56,8 @@ const Title = styled.h3`
   background-color: ${({ $group }) => badgeColors[$group] || "#ccc"};
 
   @media (min-width: 768px) {
-    font-size: 32px;
+    font-size: 23px;
+    padding: 5px 30px 5px 30px;
   }
 `;
 

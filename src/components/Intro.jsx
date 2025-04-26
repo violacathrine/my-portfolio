@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-// 🔸 Animationer
+// Animations
 const fadeInUp = keyframes`
   to {
     opacity: 1;
@@ -31,11 +31,7 @@ const Section = styled.section`
   padding: 2rem 1rem;
 
   @media (min-width: 768px) {
-    padding: 4rem 2rem;
-  }
-
-  @media (min-width: 1024px) {
-    padding: 6rem 3rem;
+    padding: 2rem 3rem;
   }
 `;
 
