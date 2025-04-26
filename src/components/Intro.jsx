@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { WaveLine } from "../components/WaveLine";
 
 // Animations
 const fadeInUp = keyframes`
@@ -16,6 +17,11 @@ const bounceIn = keyframes`
     opacity: 1;
     transform: translateY(0); 
   }
+`;
+
+const waveMorph = keyframes`
+  0% { stroke-dashoffset: 300; }
+  100% { stroke-dashoffset: 0; }
 `;
 
 const Section = styled.section`
@@ -95,48 +101,38 @@ const Button = styled.button`
   color: #000;
   position: relative;
   display: flex;
-  font-weight: 600;
-  font-size: 20px;
-  gap: 0.5rem;
+  flex-direction: column;
   align-items: center;
   border: none;
   background: none;
   cursor: pointer;
   margin-top: 2rem;
+  font-size: 20px;
+  font-weight: 600;
 
   p {
     margin: 0;
     position: relative;
-    font-size: 20px;
-    color: #000;
+    z-index: 2;
   }
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    left: 0;
-    bottom: -7px;
-    background: #000;
-    height: 2px;
-    transition: 0.3s ease-out;
+  svg {
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
-  p::before {
-    position: absolute;
-    width: 0%;
-    inset: 0;
-    color: #000;
-    overflow: hidden;
-    transition: 0.3s ease-out;
+  &:hover svg {
+    opacity: 1;
   }
 
-  &:hover::after {
-    width: 100%;
+  &:hover svg path {
+    animation: ${waveMorph} 1s linear infinite;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
   }
 
-  &:hover p::before {
-    width: 100%;
+  @media (min-width: 768px) {
+    font-size: 25px;
   }
 `;
 
@@ -165,7 +161,19 @@ export const Intro = () => {
         onClick={handleEnter}
         aria-label="Enter the main portfolio content"
       >
-        Enter my world
+        <p>Enter my world</p>
+        <WaveLine
+          viewBox="0 0 176 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2 5.2453C8.87266 2.25157 14.5999 2.25157 19.1817 5.2453C23.7634 8.23904 29.4906 8.23904 36.3633 5.2453C43.236 2.25157 48.9632 2.25157 53.5449 5.2453C58.1267 8.23904 63.8539 8.23904 70.7266 5.2453C77.5993 2.25157 83.3265 2.25157 87.9082 5.2453C92.49 8.23904 98.2172 8.23904 105.09 5.2453C111.963 2.25157 117.69 2.25157 122.272 5.2453C126.853 8.23904 132.581 8.23904 139.453 5.2453C146.326 2.25157 152.053 2.25157 156.635 5.2453C161.217 8.23904 166.944 8.23904 173.816 5.2453"
+            stroke="#FF4575"
+            strokeWidth="6"
+            strokeLinecap="round"
+          />
+        </WaveLine>
       </Button>
     </Section>
   );
