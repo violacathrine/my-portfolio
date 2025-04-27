@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { ScrollArrow } from "./ScrollArrow";
 
-
 const HeaderWrapper = styled.header`
   position: relative;
   min-height: 100vh;
@@ -10,6 +9,11 @@ const HeaderWrapper = styled.header`
   flex-direction: column;
   justify-content: space-between;
   background-color: #fff8ee;
+
+  @media (min-width: 768px) {
+    justify-content: center; /* Desktop: centrera horisontellt */
+    align-items: center; /* Desktop: centrera vertikalt */
+  }
 `;
 
 // The "Book"
@@ -26,6 +30,7 @@ const BookContainer = styled.div`
     width: 100%;
     align-items: center;
     padding-top: 16px;
+    gap: 15px;
   }
 `;
 
@@ -34,6 +39,7 @@ const TextContent = styled.section`
   flex: 1;
   padding: 16px;
   z-index: 2;
+  font-size: 18px;
   }
 `;
 
@@ -41,7 +47,7 @@ const NavWrapper = styled.section`
   position: relative;
   flex: 1;
   z-index: 2;
-  padding: 16px;
+  padding: 18px;
 `;
 
 // Navigation
@@ -52,10 +58,12 @@ const NavList = styled.ul`
 `;
 
 const NavItem = styled.li`
-  margin-bottom: 16px;
+  margin-bottom: 13px;
 `;
 
 const NavLink = styled.a`
+position: relative;
+  font-size: 18px;
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -102,7 +110,7 @@ export const HeaderSection = ({
         </TextContent>
 
         <NavWrapper>
-          <h3>CHAPTER</h3>
+          <h2>Chapter</h2>
           <nav>
             <NavList>
               {nav.map((item) => (

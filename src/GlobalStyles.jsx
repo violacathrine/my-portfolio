@@ -20,25 +20,26 @@ export const GlobalStyles = createGlobalStyle`
 
 
   h1, h2, h3 {
-    font-family: "Montserrat";
-    margin: 0 0 1rem;
+    font-family: Montserrat;
+    margin: 0 0 16px;
+    font-size: 27px;
   }
 
 
   p {
-    font-family: "Hind";
+    font-family: Hind;
     font-weight: 400;
     line-height: 1.6;
-    margin: 0 0 1rem;
+    margin: 0 0 16px;
   }
 
   li {
-  font-family: "Hind";
+  font-family: Hind;
   }
 
   a {
     color: inherit;
-    font-family: "Hind";
+    font-family: Hind;
     text-decoration: none;
   }
 `;

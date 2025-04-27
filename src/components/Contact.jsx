@@ -93,8 +93,21 @@ const iconMap = {
   GitHub: FaGithub,
 };
 
+const Footer = styled.footer`
+  font-family: hind;
+  font-size: 16px;
+  color: rgb(125, 115, 115);
+  text-align: center;
+`;
 
-export const Contact = ({ heading, name, email, image, socials }) => {
+export const Contact = ({
+  heading,
+  name,
+  email,
+  image,
+  socials,
+  footerText,
+}) => {
   return (
     <Section id="contact">
       <Heading>{heading}</Heading>
@@ -119,6 +132,7 @@ export const Contact = ({ heading, name, email, image, socials }) => {
           );
         })}
       </IconsWrapper>
+      <Footer>{footerText}</Footer>
     </Section>
   );
 };

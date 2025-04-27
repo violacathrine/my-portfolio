@@ -162,7 +162,7 @@
   },
 
   "contact": {
-    "heading": "Let's connect",
+    "heading": "Let's be creative together!",
     "name": "Cathrine Olsson",
     "email": "cathrineohlsson@live.se",
     "image": "/profile-picture.jpg",
@@ -175,6 +175,7 @@
         "platform": "GitHub",
         "link": "https://github.com/violacathrine"
       }
-    ]
+    ],
+    "footerText": "Developed by Cathi 2025"
   }
 }
