@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const Section = styled.section`
-  height: 100vh;
+  width: 100vw; /* Full width of the viewport */
+  height: 60vh;
   background-color: rgb(255, 228, 232);
   color: #000;
   display: flex;
@@ -15,6 +16,7 @@ const Section = styled.section`
     align-items: center;
     gap: 4rem;
     padding: 0 5rem;
+    height: 80vh;
     text-align: left;
   }
 `;

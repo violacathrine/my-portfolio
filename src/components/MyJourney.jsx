@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const Section = styled.section`
+  min-height: 100vh;
+  width: 100vw; /* Full width of the viewport */
   background-color: #fff8ee;
   padding: 128px 16px;
   margin: 0 auto;
@@ -20,7 +22,7 @@ const Section = styled.section`
 const RulingLines = styled.div`
   position: absolute;
   top: 0;
-  left: 0px;
+  left: 0;
   right: 0;
   height: 100%;
   background: repeating-linear-gradient(
@@ -32,8 +34,8 @@ const RulingLines = styled.div`
   z-index: 1;
 
   @media (min-width: 768px) {
-  left: 80px;
-}
+    left: 80px;
+  }
 `;
 
 const Hole = styled.div`
@@ -76,9 +78,9 @@ const Paragraph = styled.p`
   position: relative;
   z-index: 3;
 
-    @media (min-width: 768px) {
-  padding-left: 80px;
-}
+  @media (min-width: 768px) {
+    padding-left: 80px;
+  }
 `;
 
 const Highlight = styled.span`
