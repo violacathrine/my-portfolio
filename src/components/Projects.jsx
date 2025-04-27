@@ -32,7 +32,7 @@ const ProjectsWrapper = styled.div`
 const ProjectCard = styled.article`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -55,10 +55,10 @@ const Image = styled.img`
 
 const ContentWrapper = styled.div`
   flex: 2;
-  padding-top: 1rem;
+  padding-top: 16px;
 
   @media (min-width: 768px) {
-    padding-left: 2rem;
+    padding-left: 32px;
     padding-top: 0;
   }
 `;
@@ -76,7 +76,7 @@ const Text = styled.p`
 const TagsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 8px;
 `;
 
 const Tag = styled.span`

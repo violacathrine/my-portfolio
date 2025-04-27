@@ -25,7 +25,7 @@ const GroupWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 48px;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -50,10 +50,10 @@ const badgeColors = {
 };
 
 const Title = styled.h3`
-  padding: 0.25rem 0.75rem;
+  padding: 4px 12px;
   font-size: 14px;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
   color: white;
   background-color: ${({ $group }) => badgeColors[$group] || "#ccc"};
 

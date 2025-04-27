@@ -34,17 +34,17 @@ const Section = styled.section`
   text-align: center;
   background-color: rgb(255, 228, 232);
   color: #000;
-  padding: 2rem 1rem;
+  padding: 32px 16px;
 
   @media (min-width: 768px) {
-    padding: 2rem 3rem;
+    padding: 32px 48px;
   }
 `;
 
 const Heading = styled.h1`
-  font-size: 2.5rem;
+  font-size: 40px;
   line-height: 1.1;
-  margin-top: 1rem;
+  margin-top: 16px;
 `;
 
 const Line = styled.span`
@@ -61,7 +61,7 @@ const Line1 = styled(Line)`
 
 const Line2 = styled.span`
   display: inline-block;
-  font-size: 2.5rem;
+  font-size: 40px;
   opacity: 0;
   transform: translateY(-20px);
   animation: ${fadeInUp} 0.5s ease-out forwards;
@@ -71,7 +71,7 @@ const Line2 = styled.span`
 
 const Exclamation = styled.span`
   display: inline-block;
-  margin-left: 0.3rem;
+  margin-left: 5px;
   opacity: 0;
   animation: ${bounceIn} 0.6s ease forwards;
   animation-delay: 1.4s;
@@ -86,15 +86,15 @@ const Image = styled.img`
   object-fit: cover;
 
   @media (min-width: 768px) {
-    width: 18rem;
-    height: 18rem;
+    width: 300px;
+    height: 300px;
   }
 `;
 
 const Subheading = styled.h2`
-  font-size: 1.2rem;
+  font-size: 20px;
   font-weight: 500;
-  margin-top: 1rem;
+  margin-top: 16px;
 `;
 
 const Button = styled.button`
@@ -106,7 +106,7 @@ const Button = styled.button`
   border: none;
   background: none;
   cursor: pointer;
-  margin-top: 2rem;
+  margin-top: 32px;
   font-size: 20px;
 
   p {

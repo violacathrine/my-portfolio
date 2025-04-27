@@ -19,7 +19,7 @@ const ScrollWrapper = styled.div`
 
   @media (min-width: 768px) {
     position: absolute;
-    bottom: 2rem;
+    bottom: 32px;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 0;

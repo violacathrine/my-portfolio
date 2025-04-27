@@ -17,7 +17,7 @@ const BookContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-top: 3rem;
+  padding-top: 48px;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -25,14 +25,14 @@ const BookContainer = styled.div`
     max-width: 1100px;
     width: 100%;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 16px;
   }
 `;
 
 const TextContent = styled.section`
   position: relative;
   flex: 1;
-  padding: 1rem;
+  padding: 16px;
   z-index: 2;
   }
 `;
@@ -41,7 +41,7 @@ const NavWrapper = styled.section`
   position: relative;
   flex: 1;
   z-index: 2;
-  padding: 1rem;
+  padding: 16px;
 `;
 
 // Navigation
@@ -52,7 +52,7 @@ const NavList = styled.ul`
 `;
 
 const NavItem = styled.li`
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 `;
 
 const NavLink = styled.a`
@@ -74,7 +74,7 @@ const Title = styled.span`
 
 const Dots = styled.span`
   flex-grow: 1;
-  margin: 0 0.5rem;
+  margin: 0 8px;
   border-bottom: 2px dotted #000;
 `;
 

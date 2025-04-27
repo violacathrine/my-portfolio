@@ -12,8 +12,8 @@ export const WaveLine = styled.svg`
   transition: opacity 0.3s ease;
 
   path {
-    stroke-dasharray: 300; /* hur långt strecket är innan det börjar om */
-    stroke-dashoffset: 300; /* börja gömt */
+    stroke-dasharray: 300; 
+    stroke-dashoffset: 300;
     transition: stroke-dashoffset 2s ease-in-out;
   }
 `;

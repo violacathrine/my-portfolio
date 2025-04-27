@@ -66,8 +66,8 @@ const Email = styled.a`
 const IconsWrapper = styled.div`
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 24px;
+  margin-top: 16px;
 `;
 
 const SocialIconLink = styled.a`
