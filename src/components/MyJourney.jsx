@@ -88,17 +88,17 @@ const Highlight = styled.span`
   padding: 0 2px;
 `;
 
-//
-function parseHighlight(text) {
-  const parts = text.split(/(\[\[.*?\]\])/g);
-  return parts.map((part, i) =>
-    part.startsWith("[[") && part.endsWith("]]") ? (
-      <Highlight key={i}>{part.slice(2, -2)}</Highlight>
-    ) : (
-      <span key={i}>{part}</span>
-    )
-  );
-}
+
+const parseHighlight = (text) =>
+  text
+    .split(/(\[\[.*?\]\])/g)
+    .map((part, index) =>
+      part.startsWith("[[") && part.endsWith("]]") ? (
+        <Highlight key={index}>{part.slice(2, -2)}</Highlight>
+      ) : (
+        <span key={index}>{part}</span>
+      )
+    );
 
 export const MyJourney = ({ heading, text }) => {
   const paragraphs = text.split("\n");
