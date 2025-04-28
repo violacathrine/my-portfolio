@@ -4,7 +4,8 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 //  Layout
 const Section = styled.section`
   min-height: 100dvh;
-  padding: 12px 16px;
+
+  padding: 100px 16px 30px;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -12,17 +13,12 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-
-  @media (min-width: 768px) {
-    max-width: none;
-  }
 `;
 
 const Slogan = styled.h2`
   font-size: 48px;
   font-weight: 700;
   color: rgb(0, 0, 0);
-  padding-top: 50px;
 `;
 
 const ProfileImage = styled.img`
@@ -94,7 +90,6 @@ const Footer = styled.footer`
   color: rgb(125, 115, 115);
   text-align: center;
 `;
-
 
 const iconMap = {
   LinkedIn: FaLinkedinIn,
