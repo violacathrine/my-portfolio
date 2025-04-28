@@ -36,10 +36,10 @@ export const App = () => {
       <Skills heading={content.skills.heading} groups={content.skills.groups} />
 
       <Contact
-        heading={content.contact.heading}
         name={content.contact.name}
         email={content.contact.email}
         image={content.contact.image}
+        slogan={content.contact.slogan}
         socials={content.contact.socials}
         footerText={content.contact.footerText}
       />

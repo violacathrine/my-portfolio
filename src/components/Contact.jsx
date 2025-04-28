@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 //  Layout
 const Section = styled.section`
   min-height: 100dvh;
-  padding: 128px 16px;
+  padding: 12px 16px;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -18,10 +18,11 @@ const Section = styled.section`
   }
 `;
 
-const Heading = styled.h2`
+const Slogan = styled.h2`
   font-size: 48px;
   font-weight: 700;
   color: rgb(0, 0, 0);
+  padding-top: 50px;
 `;
 
 const ProfileImage = styled.img`
@@ -67,7 +68,6 @@ const IconsWrapper = styled.div`
   display: flex;
   justify-content: center;
   gap: 24px;
-  margin-top: 16px;
 `;
 
 const SocialIconLink = styled.a`
@@ -88,11 +88,6 @@ const SocialIconLink = styled.a`
   }
 `;
 
-const iconMap = {
-  LinkedIn: FaLinkedinIn,
-  GitHub: FaGithub,
-};
-
 const Footer = styled.footer`
   font-family: hind;
   font-size: 16px;
@@ -100,22 +95,28 @@ const Footer = styled.footer`
   text-align: center;
 `;
 
+
+const iconMap = {
+  LinkedIn: FaLinkedinIn,
+  GitHub: FaGithub,
+};
+
 export const Contact = ({
-  heading,
   name,
   email,
   image,
   socials,
+  slogan,
   footerText,
 }) => {
   return (
     <Section id="contact">
-      <Heading>{heading}</Heading>
       <ProfileImage src={image} alt={name} />
       <div>
         <Name>{name}</Name>
         <Email href={`mailto:${email}`}>{email}</Email>
       </div>
+      <Slogan>{slogan}</Slogan>
       <IconsWrapper>
         {socials.map((social) => {
           const IconComponent = iconMap[social.platform];
