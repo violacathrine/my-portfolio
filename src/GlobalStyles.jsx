@@ -10,7 +10,8 @@ export const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
-  body {
+
+  html, body {
     margin: 0;
     padding: 0;
     color: #000;

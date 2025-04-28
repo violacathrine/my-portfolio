@@ -25,8 +25,8 @@ const waveMorph = keyframes`
 `;
 
 const Section = styled.section`
-  min-height: 100vh;
-  width: 100vw; /* Full width of the viewport */
+  min-height: 100dvh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

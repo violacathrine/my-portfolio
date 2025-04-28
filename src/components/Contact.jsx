@@ -3,9 +3,9 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 //  Layout
 const Section = styled.section`
-  min-height: 100vh;
+  min-height: 100dvh;
   padding: 128px 16px;
-  max-width: 320px;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   display: flex;

@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 const Section = styled.section`
   background-color: rgb(255, 255, 255);
   justify-content: center;
-  min-height: 100vh;
-  width: 100vw; /* Full width of the viewport */
+  min-height: 100dvh;
+  width: 100%;
   padding: 128px 16px;
   margin: 0 auto;
   display: flex;

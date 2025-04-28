@@ -4,7 +4,7 @@ import { ScrollArrow } from "./ScrollArrow";
 const HeaderWrapper = styled.header`
   position: relative;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -62,7 +62,7 @@ const NavItem = styled.li`
 `;
 
 const NavLink = styled.a`
-position: relative;
+  position: relative;
   font-size: 18px;
   display: flex;
   align-items: center;
