@@ -87,7 +87,7 @@ const SocialIconLink = styled.a`
 const Footer = styled.footer`
   font-family: hind;
   font-size: 16px;
-  color: rgb(125, 115, 115);
+  color: rgb(0, 0, 0);
   text-align: center;
 `;
 
