@@ -11,8 +11,8 @@ const HeaderWrapper = styled.header`
   background-color: #fff8ee;
 
   @media (min-width: 768px) {
-    justify-content: center; /* Desktop: centrera horisontellt */
-    align-items: center; /* Desktop: centrera vertikalt */
+    justify-content: center; 
+    align-items: center; 
   }
 `;
 

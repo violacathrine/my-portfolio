@@ -18,7 +18,7 @@ const Heading = styled.h2`
   font-size: 48px;
   font-weight: 700;
   text-align: center;
-  color: #ff4575;
+  color:rgb(0, 0, 0);
 `;
 
 const GroupWrapper = styled.div`
@@ -70,7 +70,7 @@ const List = styled.ul`
 `;
 
 const Item = styled.li`
-  color: #ff4575;
+  color:rgb(0, 0, 0);
   font-size: 16px;
   font-weight: 500;
 

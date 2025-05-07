@@ -25,7 +25,7 @@ const Heading = styled.h2`
   font-size: 56px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
-  color: #ff4575;
+  color:rgb(0, 0, 0);
   margin-bottom: 64px;
 
   @media (min-width: 768px) {
