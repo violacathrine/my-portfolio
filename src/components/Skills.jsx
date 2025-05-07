@@ -43,10 +43,10 @@ const Group = styled(motion.div)`
 
 // Badge Colors
 const badgeColors = {
-  Code: "#ff4575",
-  Toolbox: "#3b9eff",
-  Upcoming: "#60c683",
-  More: "#ffaa00",
+  Code: "#000000",
+  Toolbox: "#000000",
+  Upcoming: "#000000",
+  More: "#000000",
 };
 
 const Title = styled.h3`
