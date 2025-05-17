@@ -44,12 +44,13 @@ const ProjectCard = styled.article`
 
 const Image = styled.img`
   width: 100%;
+  height: 300px;
   border-radius: 8px;
   object-fit: cover;
 
   @media (min-width: 768px) {
     width: 45%;
-    height: auto;
+    height: 300px;
   }
 `;
 

@@ -42,6 +42,42 @@
     "heading": "Featured Projects",
     "projects": [
       {
+        "name": "Happy Thoughts",
+        "image": "/happythoughts.png",
+        "text": "This project focus on APIs and React. It is a simple app where you can share your happy thougts together with other users. It was a lot of fun working with this project. The goal was to learn how to follow a design in Figma and build a responsive web app with React that uses an API. For this project i used Postman to test the API, wich was very helpful.",
+        "tags": ["HTML", "CSS", "React", "APIs", "Postman"],
+        "buttons": [
+          {
+            "label": "Live demo",
+            "type": "demo",
+            "href": "https://happythoughtsbyc.netlify.app/"
+          },
+          {
+            "label": "View the code",
+            "type": "code",
+            "href": "https://github.com/violacathrine/js-project-happy-thoughts"
+          }
+        ]
+      },
+      {
+        "name": "ScreamFlix",
+        "image": "/screamflix.png",
+        "text": "This project focus on APIs, React and React Router. The goal was to learn how to fetch data from an API and display it in a user-friendly way. We also worked with React Router to create a single-page application with multiple routes. I really enjoyed this project since I got to work with a lot of different technologies and tools.",
+        "tags": ["HTML", "CSS", "React", "APIs", "React Router"],
+        "buttons": [
+          {
+            "label": "Live demo",
+            "type": "demo",
+            "href": "https://screamflix.netlify.app/"
+          },
+          {
+            "label": "View the code",
+            "type": "code",
+            "href": "https://github.com/LindaSchonfeldt/js-project-movies"
+          }
+        ]
+      },
+      {
         "name": "Web Accessibility Quiz",
         "image": "/webaccessibility.png",
         "text": "This project focus on web accessibility. The goal was to learn how to develop inclusive digital experiences that work for everyone, regardless of their functional ability. We worked with semantic HTML, proper use of ARIA attributes, clear color contrast, keyboard navigation, and responsive design. ",
