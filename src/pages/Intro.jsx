@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { WaveLine } from "../components/WaveLine";
+import { useNavigate } from "react-router-dom";
 
 // Animations
 const fadeInUp = keyframes`
@@ -137,13 +138,12 @@ const Button = styled.button`
 `;
 
 export const Intro = () => {
-  const handleEnter = () => {
-    const target = document.getElementById("header-section");
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
+const navigate = useNavigate();
+
+const handleEnter = () => {
+  navigate("/portfolio");
+}
   return (
     <Section aria-labelledby="intro-heading">
       <Heading id="intro-heading" aria-label="Hi there, I'm Cathi!">

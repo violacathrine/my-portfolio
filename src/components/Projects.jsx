@@ -3,7 +3,6 @@ import { ProjectButton, ButtonsWrapper } from "./ButtonsComponents";
 
 const Section = styled.section`
   background-color: white;
-  min-height: 100dvh;
   width: 100%;
   padding: 128px 16px;
   margin: 0 auto;
@@ -24,7 +23,8 @@ const ProjectsWrapper = styled.div`
   gap: 64px;
 
   @media (min-width: 768px) {
-    max-width: 1000px;
+  flex-wrap: wrap;
+    flex-direction: row;
     margin: 0 auto;
   }
 `;
@@ -33,12 +33,18 @@ const ProjectCard = styled.article`
   display: flex;
   flex-direction: column;
   gap: 24px;
+  flex-wrap: wrap;
 
   @media (min-width: 768px) {
     flex-direction: row;
-    max-width: 900px;
+    width: 50%;
     margin: 0 auto;
     align-items: flex-start;
+    align-items: stretch;
+  }
+
+  @media (min-width: 1200px) {
+    width: 30%;
   }
 `;
 
@@ -49,8 +55,9 @@ const Image = styled.img`
   object-fit: cover;
 
   @media (min-width: 768px) {
-    width: 45%;
+    width: 100%;
     height: 300px;
+    object-fit: contain;
   }
 `;
 
@@ -60,6 +67,11 @@ const ContentWrapper = styled.div`
 
   @media (min-width: 768px) {
     padding-left: 32px;
+    padding-top: 0;
+  }
+
+    @media (min-width: 1200px) {
+    padding-left: 0px;
     padding-top: 0;
   }
 `;
