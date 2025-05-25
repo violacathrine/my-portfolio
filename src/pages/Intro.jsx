@@ -140,6 +140,7 @@ const Button = styled.button`
 export const Intro = () => {
 
 const navigate = useNavigate();
+  // Function to handle button click
 
 const handleEnter = () => {
   navigate("/portfolio");

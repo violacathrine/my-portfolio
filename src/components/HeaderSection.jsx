@@ -41,6 +41,9 @@ const TextContent = styled.section`
   z-index: 2;
   font-size: 18px;
   }
+
+  a {
+  text-decoration: underline}
 `;
 
 const NavWrapper = styled.section`

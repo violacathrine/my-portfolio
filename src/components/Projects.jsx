@@ -23,7 +23,7 @@ const ProjectsWrapper = styled.div`
   gap: 64px;
 
   @media (min-width: 768px) {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
     flex-direction: row;
     margin: 0 auto;
   }
@@ -70,7 +70,7 @@ const ContentWrapper = styled.div`
     padding-top: 0;
   }
 
-    @media (min-width: 1200px) {
+  @media (min-width: 1200px) {
     padding-left: 0px;
     padding-top: 0;
   }
@@ -105,7 +105,6 @@ export const Projects = ({ heading, projects }) => {
   return (
     <Section id="projects">
       <Heading>{heading}</Heading>
-
       <ProjectsWrapper>
         {projects.map((project) => (
           <ProjectCard key={project.name}>

@@ -6,7 +6,7 @@
 
   "headerSection": {
     "heading": "The Crash Course about me",
-    "text": "I am a curious and openminded developer with a background in sales and customer service. I enjoy creativity and really love to think outside the box. Throw in a splash of color, cool animations, a touch of playfulness and a pinch of humor and thats what you’ll get from me in a future collaboration.",
+    "text": "I am a curious and open-minded developer with a background in sales and customer service. I enjoy creativity and really love to think outside the box. Throw in a splash of color, cool animations, a touch of playfulness and a pinch of humor and thats what you’ll get from me in a future collaboration.",
     "email": "cathrineohlsson@live.se",
     "mailtoText": "Email me!",
     "nav": [
@@ -42,9 +42,27 @@
     "heading": "Featured Projects",
     "projects": [
       {
+        "name": "Todo List",
+        "image": "/todolist.png",
+        "text": "A responsive and accessible task manager built with React, Zustand, and styled-components. Users can add, complete, star, and delete tasks. All data is persisted using localStorage. Designed mobile-first and optimized for accessibility.",
+        "tags": ["HTML", "CSS", "React", "Zustand"],
+        "buttons": [
+          {
+            "label": "Live demo",
+            "type": "demo",
+            "href": "https://taskortoss.netlify.app/"
+          },
+          {
+            "label": "View the code",
+            "type": "code",
+            "href": "https://github.com/violacathrine/js-project-todo"
+          }
+        ]
+      },
+      {
         "name": "Happy Thoughts",
         "image": "/happythoughts.png",
-        "text": "This project focus on APIs and React. It is a simple app where you can share your happy thougts together with other users. It was a lot of fun working with this project. The goal was to learn how to follow a design in Figma and build a responsive web app with React that uses an API. For this project i used Postman to test the API, wich was very helpful.",
+        "text": "This project focuses on working with APIs and React. It’s a simple, interactive app where users can share their happy thoughts with others. The main goal was to follow a Figma design and build a responsive web app using React and an external API. I used Postman to test API requests, which proved to be very helpful throughout the development process. This project was both fun and a great learning experience.",
         "tags": ["HTML", "CSS", "React", "APIs", "Postman"],
         "buttons": [
           {
@@ -62,7 +80,7 @@
       {
         "name": "ScreamFlix",
         "image": "/screamflix.png",
-        "text": "This project focus on APIs, React and React Router. The goal was to learn how to fetch data from an API and display it in a user-friendly way. We also worked with React Router to create a single-page application with multiple routes. I really enjoyed this project since I got to work with a lot of different technologies and tools.",
+        "text": "This project focuses on APIs, React, and React Router. The goal was to learn how to fetch and display data in a user-friendly way, and to build a single-page application with multiple routes using React Router. It was a fun and rewarding project that involved working with several modern tools and technologies.",
         "tags": ["HTML", "CSS", "React", "APIs", "React Router"],
         "buttons": [
           {
@@ -80,7 +98,7 @@
       {
         "name": "Web Accessibility Quiz",
         "image": "/webaccessibility.png",
-        "text": "This project focus on web accessibility. The goal was to learn how to develop inclusive digital experiences that work for everyone, regardless of their functional ability. We worked with semantic HTML, proper use of ARIA attributes, clear color contrast, keyboard navigation, and responsive design. ",
+        "text": "This project focuses on web accessibility. The goal was to learn how to develop inclusive digital experiences that work for everyone, regardless of their functional ability. We worked with semantic HTML, proper use of ARIA attributes, sufficient color contrast, keyboard navigation, and responsive design. ",
         "tags": ["HTML", "CSS", "JavaScript"],
         "buttons": [
           {
@@ -98,7 +116,7 @@
       {
         "name": "Morbid Gene Official",
         "image": "/mockup-morbidgene.png",
-        "text": "This website is built with HTML, CSS and JavaScript and was one of my very first projects i built.  It’s the official site for the band Morbid Gene. This project is my favourite since i actually had to work with the client's expectations and really cool content.",
+        "text": "This was one of my very first projects, built with HTML, CSS, and JavaScript. It’s the official website for the band Morbid Gene. This project is a personal favorite, as it involved real client collaboration and showcasing unique, creative content.",
         "tags": ["HTML", "CSS", "JavaScript"],
         "buttons": [
           {
@@ -116,7 +134,7 @@
       {
         "name": "Weather app",
         "image": "/weatherapp.png",
-        "text": "This weather app was a group project were we worked with API:s from Openweather. We used TypeScript and work with several branches in Git and learned how to solve merge-conflict if there was any. It was really fun and motivating to work together.",
+        "text": "This group project focused on using the OpenWeather API and TypeScript. We collaborated using Git with multiple branches and learned how to handle merge conflicts when they occurred. It was a fun and motivating experience that strengthened both technical and teamwork skills.",
         "tags": ["HTML", "CSS", "JavaScript", "TypeScript", "APIs"],
         "buttons": [
           {
@@ -134,7 +152,7 @@
       {
         "name": "Recipe Library",
         "image": "/recipelibrary.png",
-        "text": "This project is built with API:s from Spoonacular to dynamically show real recipes. It was a lot of fun working with this project since we were following a finished design in Figma, but with a little personal tweak.",
+        "text": "This project uses the Spoonacular API to dynamically display real recipes. It was a fun challenge to follow a finished Figma design and implement it with a responsive layout and real-time data fetching for an engaging user experience.",
         "tags": ["HTML", "CSS", "JavaScript", "APIs"],
         "buttons": [
           {
@@ -162,7 +180,7 @@
     "groups": [
       {
         "title": "Code",
-        "items": ["HTML", "CSS", "JavaScript", "React", "TypeScript", "WCAG"]
+        "items": ["HTML", "CSS", "JavaScript", "React", "TypeScript"]
       },
       {
         "title": "Toolbox",
@@ -170,6 +188,7 @@
           "VS Code",
           "GitHub",
           "Git",
+          "WCAG",
           "API's",
           "Netlify",
           "Figma",
