@@ -43,12 +43,12 @@ const Section = styled.section`
 `;
 
 const Heading = styled.h1`
-  font-size: 40px;
+  font-size: 35px;
   line-height: 1.1;
   margin-top: 16px;
 
   @media (min-width: 768px) {
-    font-size: 56px;
+    font-size: 46px;
   }
 `;
 
@@ -66,7 +66,7 @@ const Line1 = styled(Line)`
 
 const Line2 = styled.span`
   display: inline-block;
-  font-size: 40px;
+  font-size: 35px;
   opacity: 0;
   transform: translateY(-20px);
   animation: ${fadeInUp} 0.5s ease-out forwards;
@@ -74,7 +74,7 @@ const Line2 = styled.span`
   animation-fill-mode: both;
 
   @media (min-width: 768px) {
-    font-size: 56px;
+    font-size: 46px;
   }
 `;
 
