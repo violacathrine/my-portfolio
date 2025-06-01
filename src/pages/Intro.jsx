@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { WaveLine } from "../components/WaveLine";
+import { WaveBottom } from "../components/WaveBottom";
 import { useNavigate } from "react-router-dom";
 
 // Animations
@@ -14,10 +15,7 @@ const bounceIn = keyframes`
   0% { opacity: 0; transform: translateY(-30px); }
   60% { opacity: 1; transform: translateY(10px); }
   80% { transform: translateY(-5px); }
-  100% { 
-    opacity: 1;
-    transform: translateY(0); 
-  }
+  100% { opacity: 1; transform: translateY(0); }
 `;
 
 const waveMorph = keyframes`
@@ -36,6 +34,8 @@ const Section = styled.section`
   background-color: rgb(255, 228, 232);
   color: #000;
   padding: 32px 16px;
+  position: relative;
+  overflow: hidden;
 
   @media (min-width: 768px) {
     padding: 32px 48px;
@@ -46,6 +46,10 @@ const Heading = styled.h1`
   font-size: 40px;
   line-height: 1.1;
   margin-top: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 56px;
+  }
 `;
 
 const Line = styled.span`
@@ -68,6 +72,10 @@ const Line2 = styled.span`
   animation: ${fadeInUp} 0.5s ease-out forwards;
   animation-delay: 0.7s;
   animation-fill-mode: both;
+
+  @media (min-width: 768px) {
+    font-size: 56px;
+  }
 `;
 
 const Exclamation = styled.span`
@@ -85,6 +93,7 @@ const Image = styled.img`
   border-radius: 50%;
   margin: 1rem 0;
   object-fit: cover;
+  z-index: 3;
 
   @media (min-width: 768px) {
     width: 300px;
@@ -96,6 +105,11 @@ const Subheading = styled.h2`
   font-size: 20px;
   font-weight: 500;
   margin-top: 16px;
+  z-index: 3;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 const Button = styled.button`
@@ -109,6 +123,7 @@ const Button = styled.button`
   cursor: pointer;
   margin-top: 32px;
   font-size: 20px;
+  z-index: 2;
 
   p {
     margin: 0;
@@ -138,13 +153,12 @@ const Button = styled.button`
 `;
 
 export const Intro = () => {
+  const navigate = useNavigate();
 
-const navigate = useNavigate();
-  // Function to handle button click
+  const handleEnter = () => {
+    navigate("/portfolio");
+  };
 
-const handleEnter = () => {
-  navigate("/portfolio");
-}
   return (
     <Section aria-labelledby="intro-heading">
       <Heading id="intro-heading" aria-label="Hi there, I'm Cathi!">
@@ -176,6 +190,8 @@ const handleEnter = () => {
           />
         </WaveLine>
       </Button>
+
+      <WaveBottom />
     </Section>
   );
 };
