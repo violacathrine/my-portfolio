@@ -102,7 +102,6 @@ const parseHighlight = (text) =>
 
 export const MyJourney = ({ heading, text }) => {
   const paragraphs = text.split("\n");
-  console.log("Paragraphs:", paragraphs);
 
   return (
     <Section id="my-journey">

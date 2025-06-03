@@ -31,7 +31,7 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgb(255, 228, 232);
+  background-color: #ffe4e8;
   color: #000;
   padding: 32px 16px;
   position: relative;
@@ -48,7 +48,7 @@ const Heading = styled.h1`
   margin-top: 16px;
 
   @media (min-width: 768px) {
-    font-size: 46px;
+    font-size: 40px;
   }
 `;
 
@@ -74,7 +74,7 @@ const Line2 = styled.span`
   animation-fill-mode: both;
 
   @media (min-width: 768px) {
-    font-size: 46px;
+    font-size: 40px;
   }
 `;
 

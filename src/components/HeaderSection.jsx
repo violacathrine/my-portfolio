@@ -1,96 +1,218 @@
 import styled from "styled-components";
-import { ScrollArrow } from "./ScrollArrow";
+import { useState } from "react";
+import { WaveTop } from "./WaveTop";
+import { FiMenu, FiX } from "react-icons/fi";
+
+const TextBlock = styled.div`
+  flex: 2;
+  min-width: 0;
+`;
+
+const ImageWrapper = styled.div`
+  flex: 1;
+  flex-shrink: 0;
+  min-width: 0;
+  max-width: 320px;
+  margin-bottom: 24px;
+
+  @media (min-width: 768px) {
+    margin-left: 40px;
+    margin-bottom: 0;
+  }
+`;
+
+const StyledImg = styled.img`
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  @media (min-width: 768px) {
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+  }
+`;
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+
+  @media (min-width: 768px) {
+    margin-top: 100px;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 40px;
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+
+    ${TextBlock} {
+      order: 2;
+    }
+
+    ${ImageWrapper} {
+      order: 1;
+      margin: 0 auto 24px;
+    }
+  }
+`;
 
 const HeaderWrapper = styled.header`
   position: relative;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #fff8ee;
+  background-color: #ffe4e8;
+  padding: 64px 16px 80px;
+  overflow: hidden;
+  text-align: left;
+  color: #000;
 
   @media (min-width: 768px) {
-    justify-content: center; 
-    align-items: center; 
+    padding: 96px 48px 120px;
   }
 `;
 
-// The "Book"
-const BookContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding-top: 48px;
+const Heading = styled.h2`
+  font-size: 36px;
+  margin-bottom: 16px;
 
   @media (min-width: 768px) {
-    flex-direction: row;
-    margin: auto;
-    max-width: 1100px;
-    width: 100%;
-    align-items: center;
-    padding-top: 16px;
-    gap: 15px;
+    font-size: 48px;
   }
 `;
 
-const TextContent = styled.section`
-  position: relative;
-  flex: 1;
-  padding: 16px;
-  z-index: 2;
+const Text = styled.p`
   font-size: 18px;
-  }
+  line-height: 1.6;
+  margin-bottom: 12px;
+`;
+
+const Contact = styled.p`
+  font-size: 18px;
 
   a {
-  text-decoration: underline}
+    text-decoration: underline;
+  }
 `;
 
-const NavWrapper = styled.section`
-  position: relative;
-  flex: 1;
-  z-index: 2;
-  padding: 18px;
+const TopRightNav = styled.nav`
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 3;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
-// Navigation
 const NavList = styled.ul`
   list-style: none;
-  padding: 0;
+  display: flex;
+  gap: 20px;
   margin: 0;
+  padding: 0;
 `;
 
 const NavItem = styled.li`
-  margin-bottom: 13px;
+  background: none;
 `;
 
 const NavLink = styled.a`
-  position: relative;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  color: #000;
+  font-weight: 600;
+  font-size: 16px;
   text-decoration: none;
+  color: #000;
+  position: relative;
 
-  &:hover {
-    background-color: rgba(255, 69, 116, 0.19);
-    color: rgb(0, 0, 0); /* Lite ljusare grå ton */
+  &:hover,
+  &:focus {
+    color: #b94e48;
+  }
+
+  &.active {
+    border-bottom: 2px solid #b94e48;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 18px; /* Ändra till önskad storlek för desktop */
   }
 `;
 
-const Title = styled.span`
-  flex-shrink: 0;
+const MobileMenuWrapper = styled.div`
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
-const Dots = styled.span`
-  flex-grow: 1;
-  margin: 0 8px;
-  border-bottom: 2px dotted #000;
+const MenuOverlay = styled.div`
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
 `;
 
-const Page = styled.span`
-  flex-shrink: 0;
+const MobileMenu = styled.div`
+  background-color: #ffcba4;
+  padding: 16px 16px 64px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  clip-path: url(#wave-clip);
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  li {
+    width: 100%;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;
+
+const Hamburger = styled.button`
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 11;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const HeaderSection = ({
@@ -101,35 +223,66 @@ export const HeaderSection = ({
   mailtoText,
   nav,
 }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     <HeaderWrapper id={id}>
-      <BookContainer>
-        <TextContent>
-          <h2>{heading}</h2>
-          <p>{text}</p>
-          <p>
-            Interested? <a href={`mailto:${email}`}>{mailtoText}</a> 💌
-          </p>
-        </TextContent>
+      <WaveTop />
 
-        <NavWrapper>
-          <h2>Chapter</h2>
-          <nav>
-            <NavList>
+      <TopRightNav>
+        <NavList>
+          {nav.map((item) => (
+            <NavItem key={item.label}>
+              <NavLink href={item.href}>{item.label}</NavLink>
+            </NavItem>
+          ))}
+        </NavList>
+      </TopRightNav>
+
+      <Hamburger onClick={toggleMenu} aria-label="Toggle menu">
+        {menuOpen ? <FiX /> : <FiMenu />}
+      </Hamburger>
+
+      {menuOpen && (
+        <MobileMenuWrapper>
+          <MenuOverlay onClick={() => setMenuOpen(false)} />
+          <MobileMenu>
+            <ul>
               {nav.map((item) => (
-                <NavItem key={item.label}>
-                  <NavLink href={item.href}>
-                    <Title>{item.label}</Title>
-                    <Dots />
-                    <Page>{item.page}</Page>
-                  </NavLink>
-                </NavItem>
+                <NavLink
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.label}
+                </NavLink>
               ))}
-            </NavList>
-          </nav>
-        </NavWrapper>
-        <ScrollArrow targetId="tech" />
-      </BookContainer>
+            </ul>
+          </MobileMenu>
+          <svg width="0" height="0">
+            <defs>
+              <clipPath id="wave-clip" clipPathUnits="objectBoundingBox">
+                <path d="M0,0 H1 V0.92 L1,0.92 C0.75,1 0.25,0.86 0,0.95 Z" />
+              </clipPath>
+            </defs>
+          </svg>
+        </MobileMenuWrapper>
+      )}
+
+      <Content>
+        <TextBlock>
+          <Heading>{heading}</Heading>
+          <Text>{text}</Text>
+          <Contact>
+            Interested? <a href={`mailto:${email}`}>{mailtoText}</a> 💌
+          </Contact>
+        </TextBlock>
+
+        <ImageWrapper>
+          <StyledImg src="/profile-picture.jpg" alt="Picture of Cathi" />
+        </ImageWrapper>
+      </Content>
     </HeaderWrapper>
   );
 };

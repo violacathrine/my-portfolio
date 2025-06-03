@@ -15,7 +15,6 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     color: #000;
-    background-color: rgb(255, 228, 232);
 
   }
 
