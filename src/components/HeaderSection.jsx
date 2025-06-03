@@ -201,6 +201,7 @@ const MobileMenu = styled.div`
 `;
 
 const Hamburger = styled.button`
+color: black;
   background: none;
   border: none;
   font-size: 28px;
