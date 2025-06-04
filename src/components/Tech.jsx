@@ -1,14 +1,20 @@
+// src/components/Tech.jsx
 import styled from "styled-components";
+
+const SectionWrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+`;
 
 const Section = styled.section`
   width: 100%;
-  background-color: rgb(255, 228, 232);
+  background-color: #ffcba4;
   color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 128px 16px;
+  padding: 50px 16px;
   text-align: center;
 
   @media (min-width: 768px) {
@@ -25,7 +31,7 @@ const Heading = styled.h2`
   font-size: 56px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   margin-bottom: 64px;
 
   @media (min-width: 768px) {
@@ -51,9 +57,11 @@ const Text = styled.p`
 
 export const Tech = ({ heading, items }) => {
   return (
-    <Section id="tech">
-      <Heading>{heading}</Heading>
-      <Text>{items.join(", ") + "."}</Text>
-    </Section>
+    <SectionWrapper>
+      <Section id="tech">
+        <Heading>{heading}</Heading>
+        <Text>{items.join(", ") + "."}</Text>
+      </Section>
+    </SectionWrapper>
   );
 };

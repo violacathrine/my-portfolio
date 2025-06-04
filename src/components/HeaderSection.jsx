@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { WaveTop } from "./WaveTop";
+import { WaveBottom } from "./WaveBottom";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const TextBlock = styled.div`
@@ -40,7 +41,7 @@ const Content = styled.div`
   align-items: center;
   text-align: center;
   gap: 16px;
-  max-width: 1200px;
+  max-width: 950px;
   margin: 0 auto;
   z-index: 2;
   position: relative;
@@ -71,13 +72,13 @@ const Content = styled.div`
 const HeaderWrapper = styled.header`
   position: relative;
   background-color: #ffe4e8;
-  padding: 64px 16px 80px;
+  padding: 64px 16px 150px;
   overflow: hidden;
   text-align: left;
   color: #000;
 
   @media (min-width: 768px) {
-    padding: 96px 48px 120px;
+    padding: 96px 48px 300px;
   }
 `;
 
@@ -228,62 +229,63 @@ export const HeaderSection = ({
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <HeaderWrapper id={id}>
-      <WaveTop />
+      <HeaderWrapper id={id}>
+        <WaveTop />
 
-      <TopRightNav>
-        <NavList>
-          {nav.map((item) => (
-            <NavItem key={item.label}>
-              <NavLink href={item.href}>{item.label}</NavLink>
-            </NavItem>
-          ))}
-        </NavList>
-      </TopRightNav>
+        <TopRightNav>
+          <NavList>
+            {nav.map((item) => (
+              <NavItem key={item.label}>
+                <NavLink href={item.href}>{item.label}</NavLink>
+              </NavItem>
+            ))}
+          </NavList>
+        </TopRightNav>
 
-      <Hamburger onClick={toggleMenu} aria-label="Toggle menu">
-        {menuOpen ? <FiX /> : <FiMenu />}
-      </Hamburger>
+        <Hamburger onClick={toggleMenu} aria-label="Toggle menu">
+          {menuOpen ? <FiX /> : <FiMenu />}
+        </Hamburger>
 
-      {menuOpen && (
-        <MobileMenuWrapper>
-          <MenuOverlay onClick={() => setMenuOpen(false)} />
-          <MobileMenu>
-            <ul>
-              {nav.map((item) => (
-                <NavLink
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item.label}
-                </NavLink>
-              ))}
-            </ul>
-          </MobileMenu>
-          <svg width="0" height="0">
-            <defs>
-              <clipPath id="wave-clip" clipPathUnits="objectBoundingBox">
-                <path d="M0,0 H1 V0.92 L1,0.92 C0.75,1 0.25,0.86 0,0.95 Z" />
-              </clipPath>
-            </defs>
-          </svg>
-        </MobileMenuWrapper>
-      )}
+        {menuOpen && (
+          <MobileMenuWrapper>
+            <MenuOverlay onClick={() => setMenuOpen(false)} />
+            <MobileMenu>
+              <ul>
+                {nav.map((item) => (
+                  <NavLink
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item.label}
+                  </NavLink>
+                ))}
+              </ul>
+            </MobileMenu>
+            <svg width="0" height="0">
+              <defs>
+                <clipPath id="wave-clip" clipPathUnits="objectBoundingBox">
+                  <path d="M0,0 H1 V0.92 L1,0.92 C0.75,1 0.25,0.86 0,0.95 Z" />
+                </clipPath>
+              </defs>
+            </svg>
+          </MobileMenuWrapper>
+        )}
 
-      <Content>
-        <TextBlock>
-          <Heading>{heading}</Heading>
-          <Text>{text}</Text>
-          <Contact>
-            Interested? <a href={`mailto:${email}`}>{mailtoText}</a> 💌
-          </Contact>
-        </TextBlock>
+        <Content>
+          <TextBlock>
+            <Heading>{heading}</Heading>
+            <Text>{text}</Text>
+            <Contact>
+              Interested? <a href={`mailto:${email}`}>{mailtoText}</a> 💌
+            </Contact>
+          </TextBlock>
 
-        <ImageWrapper>
-          <StyledImg src="/profile-picture.jpg" alt="Picture of Cathi" />
-        </ImageWrapper>
-      </Content>
-    </HeaderWrapper>
+          <ImageWrapper>
+            <StyledImg src="/profile-picture.jpg" alt="Picture of Cathi" />
+          </ImageWrapper>
+        </Content>
+        <WaveBottom />
+      </HeaderWrapper>
   );
 };

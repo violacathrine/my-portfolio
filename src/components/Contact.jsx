@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 //  Layout
 const Section = styled.section`
   min-height: 100dvh;
-
+background: #ffcba4;
   padding: 100px 16px 30px;
   width: 100%;
   margin: 0 auto;

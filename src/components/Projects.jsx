@@ -25,7 +25,7 @@ const ProjectsWrapper = styled.div`
   @media (min-width: 768px) {
     flex-wrap: wrap;
     flex-direction: row;
-    margin: 0 auto;
+    margin: 50px;
   }
 `;
 

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const Section = styled.section`
-  background-color: rgb(255, 255, 255);
+  background-color: 	#f7f6eb;
   justify-content: center;
   min-height: 100dvh;
   width: 100%;
@@ -43,10 +43,10 @@ const Group = styled(motion.div)`
 
 // Badge Colors
 const badgeColors = {
-  Code: "#000000",
-  Toolbox: "#000000",
-  Upcoming: "#000000",
-  More: "#000000",
+  Code: "#b94e48",
+  Toolbox: "#b94e48",
+  Upcoming: "#b94e48",
+  More: "#b94e48",
 };
 
 const Title = styled.h3`
