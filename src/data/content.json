@@ -10,11 +10,11 @@
     "email": "cathrineohlsson@live.se",
     "mailtoText": "Email me!",
     "nav": [
-      { "label": "Tech", "href": "#tech", "page": 1 },
-      { "label": "Projects", "href": "#projects", "page": 2 },
-      { "label": "My journey", "href": "#my-journey", "page": 3 },
-      { "label": "Skills", "href": "#skills", "page": 4 },
-      { "label": "Contact", "href": "#contact", "page": 5 }
+      { "label": "TECH", "href": "#tech" },
+      { "label": "PROJECTS", "href": "#projects"},
+      { "label": "MY JOURNEY", "href": "#my-journey"},
+      { "label": "SKILLS", "href": "#skills" },
+      { "label": "CONTACT", "href": "#contact" }
     ]
   },
 

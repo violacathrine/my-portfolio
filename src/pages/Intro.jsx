@@ -96,8 +96,8 @@ const Image = styled.img`
   z-index: 3;
 
   @media (min-width: 768px) {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
   }
 `;
 
