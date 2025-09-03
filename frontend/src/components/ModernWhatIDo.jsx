@@ -57,7 +57,12 @@ const ServicesGrid = styled.div`
   grid-template-columns: 1fr;
   gap: 32px;
   
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  
+  @media (min-width: 1025px) {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
   }
@@ -65,9 +70,9 @@ const ServicesGrid = styled.div`
 
 const ServiceCard = styled(motion.div)`
   background: ${colors.background.offWhite};
-  aspect-ratio: 1 / 1;
+  min-height: 300px;
   border-radius: 0;
-  padding: 30px 25px;
+  padding: 30px 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -78,6 +83,11 @@ const ServiceCard = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
+  @media (min-width: 768px) {
+    aspect-ratio: 1 / 1;
+    padding: 30px 25px;
+  }
   
   &:hover {
     transform: translateY(-10px) scale(1.02);
@@ -90,8 +100,13 @@ const ServiceCard = styled(motion.div)`
 `;
 
 const ServiceIcon = styled.div`
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: 36px;
+  margin-bottom: 16px;
+  
+  @media (min-width: 768px) {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: inline-block;
   color: ${colors.text.accent};
@@ -102,20 +117,31 @@ const ServiceIcon = styled.div`
 `;
 
 const ServiceTitle = styled.h3`
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   font-family: ${typography.fontFamily.heading};
   color: ${colors.text.primary};
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   line-height: 1.2;
+  
+  @media (min-width: 768px) {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
 `;
 
 const ServiceDescription = styled.p`
-  font-size: 16px;
+  font-size: 14px;
   font-family: ${typography.fontFamily.body};
   color: ${colors.text.muted};
-  line-height: 1.6;
-  margin-bottom: 24px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
 `;
 
 const SkillTags = styled.div`

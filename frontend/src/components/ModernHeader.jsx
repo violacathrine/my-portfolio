@@ -195,7 +195,7 @@ const HeroContent = styled.div`
   padding-top: 80px;
   
   @media (min-width: 768px) {
-    flex-direction: row;
+    flex-direction: row-reverse;
     text-align: left;
     gap: 60px;
     align-items: center;
@@ -220,6 +220,7 @@ const ImageWrapper = styled.div`
 const ImageStack = styled.div`
   width: 200px;
   max-width: 280px;
+  margin: 0 auto;
   transition: 0.25s ease;
   cursor: pointer;
   transform: rotate(3deg);
@@ -382,6 +383,14 @@ export const ModernHeader = ({ nav, email, mailtoText }) => {
       )}
 
       <HeroContent>
+        <ImageWrapper>
+          <ImageStack>
+            <ProfileCard className="profile-card">
+              <ProfileImage src="/profile-picture.jpg" alt="Cathi Ohlsson" />
+            </ProfileCard>
+          </ImageStack>
+        </ImageWrapper>
+        
         <TextContent>
           <Logo>Hi there,<br />I'm Cathi!</Logo>
           <Tagline>
@@ -391,14 +400,6 @@ export const ModernHeader = ({ nav, email, mailtoText }) => {
             {mailtoText} →
           </CTAButton>
         </TextContent>
-        
-        <ImageWrapper>
-          <ImageStack>
-            <ProfileCard className="profile-card">
-              <ProfileImage src="/profile-picture.jpg" alt="Cathi Ohlsson" />
-            </ProfileCard>
-          </ImageStack>
-        </ImageWrapper>
       </HeroContent>
     </HeaderWrapper>
   );
