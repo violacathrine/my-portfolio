@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { OrganicBackground } from "./OrganicBackground";
 import { colors, typography, spacing, borderRadius, shadows, animations } from "../styles/designTokens";
 
 const Section = styled.section`
@@ -363,7 +362,6 @@ export const AboutMe = () => {
 
   return (
     <Section id="about-me">
-      <OrganicBackground variant="sage" />
       <Container>
         <SectionHeader>
           <Heading>About Me</Heading>

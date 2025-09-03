@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { FiCode, FiServer, FiLayers } from "react-icons/fi";
-import { OrganicBackground } from "./OrganicBackground";
 import { colors, typography, spacing, borderRadius, shadows, animations } from "../styles/designTokens";
 
 const Section = styled.section`
@@ -176,7 +175,6 @@ export const ModernWhatIDo = () => {
 
   return (
     <Section id="what-i-do">
-      <OrganicBackground variant="darkSage" />
       <Container>
         <SectionHeader>
           <Heading>What I Do</Heading>

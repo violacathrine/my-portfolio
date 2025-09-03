@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { OrganicBackground } from "./OrganicBackground";
 import { colors, typography, spacing, borderRadius, animations } from "../styles/designTokens";
 
 const HeaderWrapper = styled.header`
@@ -339,7 +338,6 @@ export const ModernHeader = ({ nav, email, mailtoText }) => {
 
   return (
     <HeaderWrapper>
-      <OrganicBackground variant="coral" />
       
       <SocialIcons>
         <SocialIcon href="https://github.com/violacathrine" target="_blank" rel="noopener noreferrer">
