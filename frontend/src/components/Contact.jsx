@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { colors, typography, spacing } from "../styles/designTokens";
 
 //  Layout
 const Section = styled.section`
   min-height: 100dvh;
-background: #ffcba4;
+  background: ${colors.background.rose};
   padding: 100px 16px 30px;
   width: 100%;
   margin: 0 auto;
@@ -18,7 +19,7 @@ background: #ffcba4;
 const Slogan = styled.h2`
   font-size: 48px;
   font-weight: 700;
-  color: rgb(0, 0, 0);
+  color: ${colors.text.light};
 `;
 
 const ProfileImage = styled.img`
@@ -38,6 +39,7 @@ const Name = styled.p`
   font-weight: 600;
   font-size: 18px;
   margin: 0;
+  color: ${colors.text.light};
 
   @media (min-width: 768px) {
     font-size: 32px;
@@ -47,7 +49,7 @@ const Name = styled.p`
 const Email = styled.a`
   font-weight: 600;
   font-size: 16px;
-  color: black;
+  color: ${colors.quaternary};
   text-decoration: none;
 
   &:hover {
@@ -73,7 +75,8 @@ const SocialIconLink = styled.a`
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  color: rgb(0, 0, 0);
+  background: ${colors.background.white}20;
+  color: ${colors.text.light};
   font-size: 24px;
   transition:
     background-color 0.3s,
@@ -81,13 +84,14 @@ const SocialIconLink = styled.a`
 
   &:hover {
     transform: scale(1.1);
+    background: ${colors.background.dustyPink}60;
   }
 `;
 
 const Footer = styled.footer`
   font-family: hind;
   font-size: 16px;
-  color: rgb(0, 0, 0);
+  color: ${colors.text.light};
   text-align: center;
 `;
 

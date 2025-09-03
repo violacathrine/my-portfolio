@@ -10,10 +10,9 @@
     "email": "cathrineohlsson@live.se",
     "mailtoText": "Email me!",
     "nav": [
-      { "label": "TECH", "href": "#tech" },
-      { "label": "PROJECTS", "href": "#projects"},
-      { "label": "MY JOURNEY", "href": "#my-journey"},
-      { "label": "SKILLS", "href": "#skills" },
+      { "label": "ABOUT ME", "href": "#about-me" },
+      { "label": "WHAT I DO", "href": "#what-i-do" },
+      { "label": "PROJECTS", "href": "#projects" },
       { "label": "CONTACT", "href": "#contact" }
     ]
   },

@@ -1,20 +1,30 @@
 import styled from "styled-components";
 import { ProjectButton, ButtonsWrapper } from "./ButtonsComponents";
+import { WaveTop } from "./WaveTop";
+import { colors, typography, spacing } from "../styles/designTokens";
 
 const Section = styled.section`
-  background-color: white;
+  position: relative;
+  background-color: ${colors.background.white};
   width: 100%;
-  padding: 128px 16px;
+  padding: ${spacing.section} ${spacing.md};
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  gap: ${spacing.xxxl};
 `;
 
 const Heading = styled.h2`
-  font-size: 48px;
-  font-weight: 700;
+  font-size: ${typography.fontSize.h1};
+  font-weight: ${typography.fontWeight.bold};
+  font-family: ${typography.fontFamily.heading};
   text-align: center;
+  color: ${colors.text.primary};
+  margin-top: ${spacing.xxl};
+  
+  @media (max-width: 768px) {
+    font-size: ${typography.fontSize.mobile.h1};
+  }
 `;
 
 const ProjectsWrapper = styled.div`
@@ -104,6 +114,7 @@ const Tag = styled.span`
 export const Projects = ({ heading, projects }) => {
   return (
     <Section id="projects">
+      <WaveTop/>
       <Heading>{heading}</Heading>
       <ProjectsWrapper>
         {projects.map((project) => (

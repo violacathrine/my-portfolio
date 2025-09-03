@@ -14,8 +14,8 @@ export const GlobalStyles = createGlobalStyle`
   html, body {
     margin: 0;
     padding: 0;
-    color: #000;
-
+    color: #2b2b2b;
+    background: #f7e7ce;
   }
 
 

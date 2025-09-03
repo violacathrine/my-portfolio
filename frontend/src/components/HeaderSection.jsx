@@ -3,6 +3,7 @@ import { useState } from "react";
 import { WaveTop } from "./WaveTop";
 import { WaveBottom } from "./WaveBottom";
 import { FiMenu, FiX } from "react-icons/fi";
+import { colors, typography, spacing, animations } from "../styles/designTokens";
 
 const TextBlock = styled.div`
   flex: 2;
@@ -71,37 +72,46 @@ const Content = styled.div`
 
 const HeaderWrapper = styled.header`
   position: relative;
-  background-color: #ffe4e8;
-  padding: 64px 16px 150px;
+  background-color: ${colors.background.dustyPink};
+  padding: ${spacing.xxxl} ${spacing.md} 150px;
   overflow: hidden;
   text-align: left;
-  color: #000;
+  color: ${colors.text.primary};
 
   @media (min-width: 768px) {
-    padding: 96px 48px 300px;
+    padding: ${spacing.section} ${spacing.xxl} 300px;
   }
 `;
 
 const Heading = styled.h2`
-  font-size: 36px;
-  margin-bottom: 16px;
+  font-size: ${typography.fontSize.mobile.h1};
+  font-family: ${typography.fontFamily.heading};
+  font-weight: ${typography.fontWeight.bold};
+  margin-bottom: ${spacing.md};
 
   @media (min-width: 768px) {
-    font-size: 48px;
+    font-size: ${typography.fontSize.h1};
   }
 `;
 
 const Text = styled.p`
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 12px;
+  font-size: ${typography.fontSize.large};
+  font-family: ${typography.fontFamily.body};
+  line-height: ${typography.lineHeight.normal};
+  margin-bottom: ${spacing.md};
 `;
 
 const Contact = styled.p`
-  font-size: 18px;
+  font-size: ${typography.fontSize.large};
+  font-family: ${typography.fontFamily.body};
 
   a {
     text-decoration: underline;
+    transition: color ${animations.transition.fast};
+    
+    &:hover {
+      color: ${colors.primary};
+    }
   }
 `;
 
@@ -132,16 +142,17 @@ const NavLink = styled.a`
   font-weight: 600;
   font-size: 16px;
   text-decoration: none;
-  color: #000;
+  color: ${colors.text.secondary};
   position: relative;
+  transition: color ${animations.transition.fast};
 
   &:hover,
   &:focus {
-    color: #b94e48;
+    color: ${colors.primary};
   }
 
   &.active {
-    border-bottom: 2px solid #b94e48;
+    border-bottom: 2px solid ${colors.primary};
   }
 
   @media (min-width: 768px) {
@@ -169,7 +180,7 @@ const MenuOverlay = styled.div`
 `;
 
 const MobileMenu = styled.div`
-  background-color: #ffcba4;
+  background-color: ${colors.background.bronze};
   padding: 16px 16px 64px;
   width: 100%;
   position: relative;
@@ -202,7 +213,7 @@ const MobileMenu = styled.div`
 `;
 
 const Hamburger = styled.button`
-color: black;
+  color: ${colors.text.secondary};
   background: none;
   border: none;
   font-size: 28px;
